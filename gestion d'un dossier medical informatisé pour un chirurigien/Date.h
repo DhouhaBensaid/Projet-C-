@@ -4,7 +4,7 @@
 
 class Date
 {
-    int jour;
+    int j;
     int mois;
     int annee;
     public:
