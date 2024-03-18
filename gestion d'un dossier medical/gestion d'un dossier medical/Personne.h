@@ -5,6 +5,7 @@
 using namespace std;
 class Personne
 {
+protected :
 	int numCin;
 	string nom;
 	string prenom;
@@ -12,11 +13,11 @@ class Personne
 public:
 	Personne(int, string, string, int);
 	virtual ~Personne();
-	virtual void afficher(string="")=0;
-	virtual void saisie() = 0;
+	virtual void afficher()=0;
+	virtual void saisir() = 0;
 	friend ostream& operator<<(ostream&, Personne&);
 	friend istream& operator>>(istream&, Personne&);
-	friend istream& operator==(istream&, Personne&);
+	bool operator==(Personne&);
 
 };
 
