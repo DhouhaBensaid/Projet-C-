@@ -1,11 +1,16 @@
-// gestion d'un dossier medical.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
 
 #include <iostream>
-
+#include"Patient.h"
 int main()
 {
-    std::cout << "Hello World!\n";
+    //test du classe patient
+    Patient p;
+    p.saisir();
+    p.afficher();
+    p.supprimerComplication(2);
+    p.afficher();
+
 }
 
 

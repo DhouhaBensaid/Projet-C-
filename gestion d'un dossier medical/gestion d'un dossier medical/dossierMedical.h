@@ -3,15 +3,14 @@
 #define DOSSIERMEDICAL_H
 #include "date.h"
 #include<string>
-#include<ostream>
-#include<istream>
+#include"Patient.h"
 using namespace std;
 
 class dossierMedical
 {
 protected:
     string nomPatient;
-    string prenonPatient;
+    string prenomPatient;
     date dateNaiss;
     char sexe;
     string specialistConsulte;
@@ -21,9 +20,10 @@ public:
         virtual void afficher(string = "") = 0;
         virtual void modifierPatient(Patient p) = 0;
         virtual void supprimerHistorique() = 0;
-        friend ostream& operator<< (ostream&, dossierMedical&);
-        friend istream& operator>>(istream&, dossierMedical);
-        friend istream& operator==(istream&, dossierMedical);
+        friend ostream& operator<<(ostream&, dossierMedical&);
+        friend istream& operator>>(istream&, dossierMedical&);
+
+        bool operator==(dossierMedical&);
         virtual ~dossierMedical();
 
 };

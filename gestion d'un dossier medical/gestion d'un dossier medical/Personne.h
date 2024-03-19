@@ -1,8 +1,8 @@
 #pragma once
 #include<string>
+using namespace std;
 #include<istream>
 #include<ostream>
-using namespace std;
 class Personne
 {
 protected :
@@ -15,7 +15,7 @@ public:
 	virtual ~Personne();
 	virtual void afficher()=0;
 	virtual void saisir() = 0;
-	friend ostream& operator<<(ostream&, Personne&);
+	friend std::ostream& operator<<(std::ostream&, Personne&);
 	friend istream& operator>>(istream&, Personne&);
 	bool operator==(Personne&);
 

@@ -9,12 +9,14 @@ class Complication
 	string type;
 	string gravite;
 public:
-	Complication(int,string,string);
+	Complication(int=0,string="", string="");
+	//Complication();
 	void saisir();
-	void afficher(string = "");
+	void afficher();
+	int getId() { return id; };
 	friend ostream operator<<(ostream&, Complication&);
 	friend istream operator>>(istream&, Complication&);
-	friend istream operator==(istream&, Complication&);
+	bool  operator==(Complication&);
 	~Complication();
 
 };

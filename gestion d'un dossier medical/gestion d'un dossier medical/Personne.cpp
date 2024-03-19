@@ -10,16 +10,16 @@ ostream& operator<<(ostream& out,  Personne& personne) {
     return out;
 }
 
-istream& operator>>(istream& is, Personne& personne) {
+istream& operator>>(istream& in, Personne& personne) {
     cout << "Enter NumCin: ";
-    is >> personne.numCin;
+    in >> personne.numCin;
     cout << "Enter Nom: ";
-    is >> personne.nom;
+    in >> personne.nom;
     cout << "Enter Prenom: ";
-    is >> personne.prenom;
+    in >> personne.prenom;
     cout << "Enter NumTel: ";
-    is >> personne.numTel;
-    return is;
+    in >> personne.numTel;
+    return in;
 }
 
 bool Personne::operator==( Personne& p) {
