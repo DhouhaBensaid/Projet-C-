@@ -15,11 +15,10 @@ protected:
     char sexe;
     string specialistConsulte;
 public:
-        dossierMedical(string, string, date, char, string);
+        dossierMedical(string="", string="", int=0, int=0, int=0, char='F', string="");
         virtual void saisir() = 0;
-        virtual void afficher(string = "") = 0;
-        virtual void modifierPatient(Patient p) = 0;
-        virtual void supprimerHistorique() = 0;
+        virtual void afficher() = 0;
+        virtual void modifierPatient(Patient p);
         friend ostream& operator<<(ostream&, dossierMedical&);
         friend istream& operator>>(istream&, dossierMedical&);
 

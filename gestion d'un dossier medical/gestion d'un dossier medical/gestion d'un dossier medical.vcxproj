@@ -130,19 +130,25 @@
     <ClCompile Include="Chirurgien.cpp" />
     <ClCompile Include="Complication.cpp" />
     <ClCompile Include="date.cpp" />
+    <ClCompile Include="dossierChirurgical.cpp" />
     <ClCompile Include="dossierMedical.cpp" />
     <ClCompile Include="gestion d%27un dossier medical.cpp" />
+    <ClCompile Include="noteOperatoire.cpp" />
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="Personne.cpp" />
+    <ClCompile Include="postChirurgicale.cpp" />
     <ClCompile Include="Secretaire.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chirurgien.h" />
     <ClInclude Include="Complication.h" />
     <ClInclude Include="date.h" />
+    <ClInclude Include="dossierChirurgical.h" />
     <ClInclude Include="dossierMedical.h" />
+    <ClInclude Include="noteOperatoire.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="Personne.h" />
+    <ClInclude Include="postChirurgicale.h" />
     <ClInclude Include="Secretaire.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

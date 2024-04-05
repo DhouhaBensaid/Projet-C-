@@ -39,6 +39,15 @@
     <ClCompile Include="Complication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="postChirurgicale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dossierChirurgical.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="noteOperatoire.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dossierMedical.h">
@@ -60,6 +69,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Complication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="postChirurgicale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dossierChirurgical.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="noteOperatoire.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
