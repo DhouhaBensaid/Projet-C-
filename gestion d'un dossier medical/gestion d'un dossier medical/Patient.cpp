@@ -9,12 +9,12 @@ void Patient::saisir()
 	Personne::saisir();
 	cout << "Donner le groupe sanguin du patient : " << endl;
 	cin >> groupeSanguin;
-	cout << "Voulez vous ajouter une complication au patien ? (o / n)" << endl;
+	cout << "Voulez vous ajouter une complication au patient ? (o / n)" << endl;
 	cin >> rep;
 	while (rep == 'o')
 	{
 		ajouterComplication();
-		cout << "Voulez vous ajouter une complication au patien ? (o / n)" << endl;
+		cout << "Voulez vous ajouter une complication au patient ? (o / n)" << endl;
 		cin >> rep;
 	}
 }

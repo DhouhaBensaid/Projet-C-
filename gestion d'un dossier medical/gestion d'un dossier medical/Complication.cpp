@@ -17,3 +17,10 @@ void Complication::afficher()
 	cout << "La gravite de la complication : " << gravite << endl;
 
 }
+#include "Complication.h"
+
+Complication::~Complication() 
+{
+	
+}
+

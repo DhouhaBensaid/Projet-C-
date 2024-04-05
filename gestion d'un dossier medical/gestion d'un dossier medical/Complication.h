@@ -9,6 +9,7 @@ class Complication
 	string type;
 	string gravite;
 public:
+
 	Complication(int=0,string="", string="");
 	//Complication();
 	void saisir();
