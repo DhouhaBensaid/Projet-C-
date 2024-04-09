@@ -5,7 +5,7 @@ Personne::Personne(int numCin, string nom, string prenom, int numTel) : numCin(n
 Personne::~Personne() {}
 
 ostream& operator<<(ostream& out,  Personne& personne) {
-    cout << "Affichage  des information du personne : " << endl;
+    //cout << "Affichage  des information du personne : " << endl;
     out << "NumCin: " << personne.numCin << ", Nom: " << personne.nom << ", Prenom: " << personne.prenom << ", NumTel: " << personne.numTel;
     return out;
 }
@@ -27,7 +27,7 @@ bool Personne::operator==( Personne& p) {
 }
 void Personne::afficher()
 {
-    cout << "*** Affichage  des information du personne : ***" << endl;
+    //cout << "*** Affichage  des information du personne : ***" << endl;
     cout << "CIN : " << numCin << endl;
 	cout << "Nom : " << nom << endl;
 	cout << "Prenom : " <<prenom<< endl;
@@ -35,7 +35,8 @@ void Personne::afficher()
 }
 void Personne::saisir()
 {
-    cout << "*** Saisir les information du personne : ***" << endl;
+   // cout << "*** Saisir les information du personne : ***" << endl;
+    cout << endl << "-----------------------------------------------------------------------------------" << endl;
     cout << "Donner CIN : "  << endl;
     cin >> numCin;
     cout << "Donner le Nom : " << endl;

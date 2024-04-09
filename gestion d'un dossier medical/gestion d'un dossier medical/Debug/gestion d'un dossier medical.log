@@ -1,0 +1,4 @@
+﻿  dossierChirurgical.cpp
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.cpp(42,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.cpp(71,22): warning C4018: '<': signed/unsigned mismatch
+LINK : fatal error LNK1168: cannot open C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\Debug\gestion d'un dossier medical.exe for writing

@@ -1,5 +1,5 @@
 #pragma once
-#include "dossierMedical.h"
+#include "dossierChirurgical.h"
 #include "date.h"
 #include"Complication.h"
 #include<istream>
@@ -7,7 +7,7 @@
 #include<vector>
 #include<string>
 using namespace std;
-class postChirurgicale :public dossierMedical
+class postChirurgicale :public dossierChirurgical
 {
 protected:
     date DateRdv;
@@ -16,7 +16,7 @@ protected:
     string progresRealises;
     vector<Complication*>tab;
 public:
-    postChirurgicale(string = "", string = "", int = 0, int = 0, int = 0, char = 'F', string = "", string = "", string = "", string = "");
+    postChirurgicale(string = "", string = "", int = 0, int = 0, int = 0, char = 'F', string = "", string ="",int =0,int =0,int=0,string = "", string = "", string = "");
     void saisir();
     void afficher();
     void modifierDate(date);

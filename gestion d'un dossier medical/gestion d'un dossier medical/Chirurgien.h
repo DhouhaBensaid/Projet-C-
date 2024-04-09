@@ -2,19 +2,27 @@
 #include "Personne.h"
 #include"Patient.h"
 #include"Complication.h"
+#include "Secretaire.h"
 #include<string>
+#include<vector>
 using namespace std;
 class Chirurgien :
     public Personne
 {
     string specialite;
+    vector<Patient*>tab;
+
 public :
-    Chirurgien(int, string, string, int, string);
-    void consulterDossier();
-    void consulterHistorique();
-    void AjouterNote();
-    void ajouterComplication(Complication);
-    void modifierInfoPatient(Patient);
+    Chirurgien(int=0, string="", string="", int=0, string="");
+    void saisir();
+	void afficher();
+    void saisirPatients();
+    void consulterDossier(Secretaire&);
+    void AjouterNote(Secretaire&);
+    void ajouterComplication();
+    void modifierInfoPatient();
+	void supprimerComplicationDuPatient();
+    void afficherTousLesPatients();
     friend ostream& operator<<(ostream&, Chirurgien&);
     friend istream operator>>(istream&, Chirurgien&);
     friend istream& operator==(istream&, Chirurgien&);

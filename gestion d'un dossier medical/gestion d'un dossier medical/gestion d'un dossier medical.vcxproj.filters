@@ -48,6 +48,9 @@
     <ClCompile Include="noteOperatoire.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RendezVous.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dossierMedical.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="noteOperatoire.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RendezVous.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

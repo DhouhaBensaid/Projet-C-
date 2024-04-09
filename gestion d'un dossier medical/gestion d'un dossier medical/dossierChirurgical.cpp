@@ -1,9 +1,8 @@
 #include "dossierChirurgical.h"
 #include "dossierMedical.h"
-#include"postChirurgicale.h"
 #include <iostream>
 using namespace std;
-dossierChirurgical::dossierChirurgical(string nomP, string prenomP, int j, int m, int a, char sexe, string specialiste, string heureRd, string objectifRd, string progres, string  type , int jI, int mI, int aI): postChirurgicale(nomP,prenomP, j, m, a,sexe,specialiste,heureRd,objectifRd,progres), typeIntervention(type) , dateIntervention(jI,mI,aI)
+dossierChirurgical::dossierChirurgical(string nomP, string prenomP, int j, int m, int a, char sexe, string specialiste, string  type , int jI, int mI, int aI): dossierMedical(nomP,prenomP, j, m, a,sexe,specialiste), typeIntervention(type) , dateIntervention(jI,mI,aI)
  {
  }
 void dossierChirurgical::ajouterNote(noteOperatoire no) 
@@ -14,16 +13,18 @@ void dossierChirurgical::ajouterNote(noteOperatoire no)
 void dossierChirurgical::saisir() 
 {
     char rep;
-    cout << "***Saisie des informations du dossier chirurgical ***" << endl;
-    postChirurgicale::saisir();
-    cout<< " Donner le type d intervention chirurgicale : ";
+    cout << "\t ++++ Saisie des informations du dossier chirurgical ++++" << endl<<endl;
+    dossierMedical::saisir();
+    cout<< "Donner le type d intervention chirurgicale : ";
     cin >> typeIntervention;
+    cout << "Donner la date de l'intervention chirurgical : " << endl;
+    cin >> dateIntervention;
     cout << "Voulez vous ajouter une note operatoire au dossier ? (o / n)" << endl;
     cin >> rep;
     while (rep == 'o')
     {
         noteOperatoire note;
-        cout<< "saisie d une note : " << endl;
+        cout<< "<<<< Saisie d une note >>>> " << endl<<endl;
         cin >> note;
         ajouterNote(note);
         cout<< "Voulez vous ajouter une note dossier ? (o / n)" << endl;
@@ -33,15 +34,16 @@ void dossierChirurgical::saisir()
 
 void dossierChirurgical::afficher() 
 {
-    cout << "***Affichage informations du dossier chirurgical***" << endl;
-    postChirurgicale::afficher(); 
+    cout << "\t ++++ Affichage informations du dossier chirurgical ++++" << endl << endl;
+    dossierMedical::afficher();
     cout << "Type d intervention chirurgicale : " << typeIntervention << endl;
-    cout << "Date de l intervention chirurgicale : " << dateIntervention << endl;
+    cout << "Date de l intervention chirurgicale : "<<dateIntervention<< endl;
     cout << "Notes operatoires : " << endl;
     for (int i = 0;i<notes.size();i++)
     {
         notes[i]->afficher();
     }
+    cout << endl;
 }
 void dossierChirurgical::modifierDate(date d) 
 {
@@ -55,9 +57,9 @@ ostream& operator<< (ostream& out, dossierChirurgical& dossier)
     return out;
 }
 istream& operator >> (istream& in, dossierChirurgical& dossier) {
-    cout << "donner le type d intervention chirurgicale : ";
+    cout << "Donner le type d intervention chirurgicale : ";
     in >> dossier.typeIntervention;
-    cout << "donner la date de l intervention chirurgicale : ";
+    cout << "Donner la date de l intervention chirurgicale : ";
     in >> dossier.dateIntervention;
     return in;
 }

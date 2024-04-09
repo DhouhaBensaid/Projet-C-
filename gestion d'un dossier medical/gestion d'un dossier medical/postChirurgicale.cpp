@@ -1,16 +1,17 @@
 #include "postChirurgicale.h"
-#include"dossierMedical.h"
+#include"dossierChirurgical.h"
 #include "date.h"
 #include<iostream>
 using namespace std;
-postChirurgicale::postChirurgicale(string nomP, string prenomP, int j, int m, int a, char sexe, string specialiste, string heureRd, string objectifRd, string progres)
-	: dossierMedical(nomP, prenomP, j, m, a, sexe, specialiste), heureRdv(heureRd), objectifsRdv(objectifRd), progresRealises(progres) {}
+postChirurgicale::postChirurgicale(string nomP, string prenomP, int j, int m, int a, char sexe, string specialiste, string  type, int jI, int mI, int aI, string heureRd, string objectifRd, string progres)
+	: dossierChirurgical(nomP, prenomP, j, m, a, sexe, specialiste,type,jI,mI,aI), heureRdv(heureRd), objectifsRdv(objectifRd), progresRealises(progres) {}
 
 void postChirurgicale::saisir()
 {
 	char rep;
-	cout << "***Saisie des informations du post chirurgical***" << endl;
-	dossierMedical::saisir();
+	cout << "***Saisie des informations du dossier post chirurgical***" << endl;
+	dossierChirurgical dc;
+	dc.saisir();
 	cout << "Donner l heure du rendez-vous " << endl;
 	cin >> heureRdv;
 	cout << "Donner la date de rendez-vous" << endl;
@@ -30,8 +31,9 @@ void postChirurgicale::saisir()
 }
 void postChirurgicale::afficher()
 {
-	cout << "***Affichage des informations du post chirurgical***" << endl;
-	dossierMedical::afficher();
+	cout << "***Affichage des informations du dossier post chirurgical***" << endl;
+	dossierChirurgical dc;
+	dc.afficher();
 	cout << "Heure du rendez-vous : " << heureRdv << endl;
 	cout << "Date du rendez-vous : " << DateRdv << endl;
 	cout << "Progres realises au cours du rendez-vous : " << progresRealises<< endl;

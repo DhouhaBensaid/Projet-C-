@@ -1,19 +1,60 @@
 #include "Secretaire.h"
+#include "dossierChirurgical.h"
+#include <stdexcept>
 #include <iostream>
 #pragma once
 Secretaire::Secretaire(int numCin, string nom, string prenom, int numTel, float salaire) : Personne(numCin, nom, prenom, numTel), salaire(salaire) {}
 
-void Secretaire::creerDossierMedicale() {
-}
-
-
-
 void Secretaire::creerDossierChirurgical() {
+    char rep;
+    do {
+
+        cout << "\t<<<< Creation d'un dossier chirurgical >>>>" << endl<<endl;
+        dossierChirurgical* dc = new dossierChirurgical();
+        dc->saisir();
+        dossiers.push_back(dc);
+		cout << "Voulez Vous ajouter un dossier chirurgical ? o/n" << endl;
+        cin >> rep;
+    } while (rep == 'o');
+    cout << endl << "-----------------------------------------------------------------------------------" << endl;
+
 }
 
 void Secretaire::planifierRdv() {
+    char rep;
+    cout << "\t ++++ Planification des rendez-Vous ++++" << endl << endl;
+    do {
+        RendezVous* rdv = new RendezVous();
+        rdv->saisir();
+        tab.push_back(rdv);
+        cout << "Voulez vous ajouter un Rendez-Vous ? o/n " << endl;
+        cin >> rep;
+    }
+    while (rep == 'o');
+    
+    cout << endl << "-----------------------------------------------------------------------------------" << endl;
+
+}
+void Secretaire::supprimerRdv(int pos) {
+    try {
+        cout << "\t ++++ Suppression du rendez-Vous qui a la position " << pos << " ++++" << endl << endl;
+        if (pos >= 0 && pos < tab.size()) {
+            tab.erase(tab.begin() + pos);
+        }
+        else {
+            throw out_of_range("Invalid rendez-vous position"); 
+        }
+        cout << endl << "-----------------------------------------------------------------------------------" << endl;
+    }
+    catch (const exception& e) {
+        cout << "Exception caught: " << e.what() << endl; 
+    }
 }
 
+dossierChirurgical* Secretaire::getDossierChirurgical(int pos)
+{
+    return dossiers[pos];
+}
 ostream& operator<< (ostream& out, Secretaire& s) {
     Personne* p = &s;
     out <<*p; // appel de operator<< de la classe personne
@@ -37,14 +78,73 @@ bool Secretaire::operator==(Secretaire& s) {
 
 void Secretaire::afficher()
 {
+    cout << "\t +++++ Affichage des information du Secretaire +++++" << endl << endl;
 	Personne::afficher();
-    cout << "Salaire : " << salaire << endl;
+    cout << "Salaire : " << salaire << endl << endl;
+    cout << endl << "-----------------------------------------------------------------------------------" << endl;
+
 
 }
-void Secretaire::saisir()
+void Secretaire::afficherTousLesRendezVous()
 {
-    Personne::saisir();
-    cout << "Donner Salaire " << endl;
-    cin >> salaire;
+    cout << "\t ++++ Liste des Rendez-Vous ++++ : " << endl << endl;
+    for (int i = 0;i < tab.size();i++)
+    {
+        tab[i]->afficher();
+    }
+    cout << endl << "-----------------------------------------------------------------------------------" << endl;
 }
-Secretaire::~Secretaire() {};
+void Secretaire::consulterToutLesDossier()
+{
+    cout << "\t ++++ Liste des dossiers ++++ : " << endl << endl;
+    for (int i = 0;i < dossiers.size();i++)
+    {
+        dossiers[i]->afficher();
+    }
+    cout << endl << "-----------------------------------------------------------------------------------" << endl;
+
+}
+void Secretaire::consulterDossier(int& pos) {
+    try {
+        cout << endl << "-----------------------------------------------------------------------------------" << endl;
+        if (pos >= 0 && pos < dossiers.size()) {
+            dossiers.at(pos)->afficher(); // Use at() function for bounds checking
+        }
+        else {
+            throw out_of_range("Invalid dossier position"); // Throw an out_of_range exception for invalid position
+        }
+        cout << endl << "-----------------------------------------------------------------------------------" << endl;
+    }
+    catch (const exception& e) {
+        cout << "Exception caught: " << e.what() << endl; // Print exception message
+    }
+}
+
+void Secretaire::saisir() {
+    try {
+        cout << "\t++++ Saisir du Secretaire ++++" << endl << endl;
+        Personne::saisir();
+        cout << "Donner Salaire : ";
+        cin >> salaire;
+        if (salaire < 0) {
+            throw invalid_argument("Salaire invalide : doit être un nombre positif");
+        }
+        cout << endl << "-----------------------------------------------------------------------------------" << endl;
+    }
+    catch (const exception& e) {
+        cout << "Erreur : " << e.what() << endl;
+
+    }
+}
+Secretaire::~Secretaire() {
+    for (int i = 0;i < tab.size();i++)
+    {
+        delete tab[i];
+    }
+    for (int i = 0;i < dossiers.size();i++)
+    {
+        delete dossiers[i];
+    }
+    tab.clear();
+	dossiers.clear(); 
+};

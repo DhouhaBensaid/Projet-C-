@@ -29,11 +29,11 @@ ostream& operator<<(ostream& out, date& date)
 }
 istream& operator>>(istream& in , date& date)
 {
-    cout << "Enter le jour ";
+    cout << "\tEnter le jour ";
     in >> date.jour;
-    cout << "Enter le mois";
+    cout << "\tEnter le mois";
     in >> date.mois;
-    cout << "Enter l annee ";
+    cout << "\tEnter l annee ";
     in >> date.annee;
     return in;
 }

@@ -1,10 +1,13 @@
 #include "Patient.h"
 #include<iostream>
+#include "Secretaire.h"
 Patient::Patient(int numCin, string nom, string prenom, int numTel, char groupeSanguin) :Personne(numCin, nom, prenom, numTel), groupeSanguin(groupeSanguin)
-{}
+{
+}
 
 void Patient::saisir()
 {
+	cout << "\t ++++ Saisir du Patient ++++" << endl<<endl;
 	char rep;
 	Personne::saisir();
 	cout << "Donner le groupe sanguin du patient : " << endl;
@@ -17,16 +20,20 @@ void Patient::saisir()
 		cout << "Voulez vous ajouter une complication au patient ? (o / n)" << endl;
 		cin >> rep;
 	}
+	cout << endl << "-----------------------------------------------------------------------------------" << endl;
+
 }
 
 void Patient::afficher()
 {
+	cout << "\t ++++ Affichage des information du patient ++++" << endl << endl;
 	Personne::afficher();
 	cout << " Groupe sanguin : " <<groupeSanguin<< endl;
 	for (int i = 0; i < tab.size(); i++)
 	{
 		tab[i]->afficher();
 	}
+	cout << endl << "-----------------------------------------------------------------------------------" << endl;
 
 }
 ostream& operator<<(ostream& out, Patient& p)
@@ -44,6 +51,11 @@ istream& operator>>(istream& in, Patient& p)
 	in >> p.groupeSanguin;
 	return in;
 }
+
+bool Patient::operator==(Patient& p)
+{
+	return (groupeSanguin == p.groupeSanguin);
+}
 void Patient::ajouterComplication()
 {
 	Complication* c = new Complication(); 
@@ -60,3 +72,9 @@ void Patient::supprimerComplication(int id)
 			cout << "Cette complication ou l id est" << id << "n'existe pas " << endl;
 	}
 }
+
+Patient::~Patient() {
+	for (int i = 0;i < tab.size();i++)
+		delete tab[i];
+	tab.clear();
+};

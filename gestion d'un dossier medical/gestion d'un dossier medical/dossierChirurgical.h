@@ -1,17 +1,17 @@
 #pragma once
-#include "postChirurgicale.h"
+#include "dossierMedical.h"
 #include"noteOperatoire.h"
 #include"date.h"
 #include<vector>
 #include<string>
 using namespace std;
-class dossierChirurgical :public postChirurgicale
+class dossierChirurgical :public dossierMedical
 {
 	string typeIntervention;
-	date dateIntervention;// on ne peut pas declarer chirurgien car classe abstraite
+	date dateIntervention;
 	vector<noteOperatoire*> notes;
 public:
-	dossierChirurgical(string = "", string = "", int = 0, int = 0, int = 0, char = 'F', string = "", string = "", string = "", string = "",string = "", int = 0, int = 0, int = 0);
+	dossierChirurgical(string = "", string = "", int = 0, int = 0, int = 0, char = 'F', string = "",string = "", int = 0, int = 0, int = 0);
 	void saisir();
 	void afficher();
 	void modifierDate(date);

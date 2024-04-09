@@ -29,7 +29,6 @@ dossierMedical::dossierMedical(string nom, string prenom, int jour, int mois, in
     cout << "saisir le prenom du patient" << endl;
     in >> dm.prenomPatient;
     cout << "saisir la date de naissance du patient" << endl;
-    // in >> dm.dateNaiss.; // tu dois acceder au champs de date par les setters !!
     in >> dm.dateNaiss;
     cout << "saisir le sexe du patient" << endl;
     in >> dm.sexe;
@@ -43,14 +42,14 @@ dossierMedical::dossierMedical(string nom, string prenom, int jour, int mois, in
 }
  void dossierMedical::saisir()
  {
-     cout << "***Saisie des informations du dossier Medical***" << endl;
+     cout << "\t**** Saisie des informations du dossier Medical ****" << endl<<endl;
      cout << "Donner le nom du patient : " << endl;
      cin >>nomPatient;
      cout << "Donner le prenom du patient : " << endl;
      cin >>prenomPatient;
      cout << "Donner la date de naissance du patient  : " << endl;
      cin >>dateNaiss;
-     cout << "\n Donner le sexe du patient  : " << endl;
+     cout << "Donner le sexe du patient  : " << endl;
      cin >> sexe;
      cout << "Donner le nom du specialiste consulte par le patient  : " << endl;
      cin >> specialistConsulte;
@@ -58,7 +57,7 @@ dossierMedical::dossierMedical(string nom, string prenom, int jour, int mois, in
  }
  void dossierMedical::afficher()
  {
-     cout << "***Affichage informations du dossier Medical ***" << endl;
+     cout << "\t**** Affichage informations du dossier Medical ****" << endl<<endl;
      cout << "Le nom du patient est : " << nomPatient << endl;
      cout << "Le prenom du patient est : " << prenomPatient << endl;
      cout << "La date de naissance du patient est : " << dateNaiss<< endl;
@@ -66,7 +65,7 @@ dossierMedical::dossierMedical(string nom, string prenom, int jour, int mois, in
      cout << "Le specialiste consulte par le  patient est : " <<specialistConsulte << endl;
  }
  void dossierMedical::modifierPatient(Patient p) {
-     cout << "****Modification des informations medicales du patient:****" << endl;
+     cout << "\t**** Modification des informations medicales du patient ****" << endl<<endl;
      cout << "Nouveau nom : ";
      cin >> nomPatient;
      cout << "Nouveau prénom : ";
