@@ -1,5 +1,6 @@
 #include "Chirurgien.h"
 #include <iostream>
+#include<fstream>
 Chirurgien::Chirurgien(int numCin, string nom, string prenom, int numTel, string specialite) :Personne(numCin, nom, prenom, numTel), specialite(specialite)
 {}
 
@@ -27,13 +28,14 @@ void Chirurgien::consulterDossier(Secretaire& s)
     cin >> pos;
 	s.consulterDossier(pos); 
 }
-void Chirurgien::saisirPatients()
+void Chirurgien::saisirPatients(fstream& f)
 {
     char rep;
     do {
         Patient* p = new Patient();
         p->saisir();
         tab.push_back(p);
+        f << p << endl;
         cout << "Voulez vous ajouter un patient ? o/n" << endl;
         cin >> rep;
     } while (rep == 'o');
@@ -91,6 +93,59 @@ void Chirurgien::supprimerComplicationDuPatient()
     cout <<endl<< "-----------------------------------------------------------------------------------" << endl;
 
 }
+void Chirurgien::creer(fstream& f)
+{
+    f.open("C:\\Users\\marwa\\patients.txt", ios::in | ios::out | ios::trunc);
+    if (!f.is_open()) {
+        cout << "Erreur: Impossible d'ouvrir le fichier pour écriture." << endl;
+        exit(-1);
+    }
+}
+void Chirurgien::supprimerPatient(fstream& f)
+{
+    int pos;
+    cout << "Donner la position du patient à supprimer dans le tableau : ";
+    cin >> pos;
+    int cin = tab[pos]->getNumCin();
+	tab.erase(tab.begin() + pos);
+    string ligne;
+    bool patientTrouve = false;
+    fstream fichierTemp("C:\\Users\\marwa\\temp.txt", ios::in | ios::out | ios::trunc);
+    if (!fichierTemp.is_open()) {
+        cout << "Erreur: Impossible d'ouvrir le fichier temporaire pour écriture." << endl;
+        exit(-1);
+    }
+    f.seekg(0);
+    while (getline(f, ligne)) {
+        if (ligne.substr(0, 8) == "NumCin: ") {
+            // Extraire le numéro de CIN après "NumCin: "
+            string numCINFromLine = ligne.substr(8, 8); // Commence à l'index 8, longueur 8
+            if (to_string(cin) == numCINFromLine) {
+                patientTrouve = true;
+                cout << "Patient trouvé " << endl;
+            }
+            else {
+                fichierTemp << ligne << endl;
+            }
+        }
+    }
+    // Fermer les fichiers
+    f.close();
+    fichierTemp.close();
+
+    // Supprimer le fichier original
+    remove("C:\\Users\\marwa\\patients.txt");
+    // Renommer le fichier temporaire pour remplacer le fichier original
+    rename("C:\\Users\\marwa\\temp.txt", "C:\\Users\\marwa\\patients.txt");
+
+    if (!patientTrouve) {
+        cout << "Patient avec le numero de CIN donne non trouve." << endl;
+    }
+    else {
+        cout << "Patient supprime avec succes." << endl;
+    }
+}
+
 
 Chirurgien::~Chirurgien() {
     for (int i = 0;i < tab.size();i++)

@@ -15,8 +15,12 @@ public:
 	void saisir();
 	void afficher();
 	int getId() { return id; };
-	friend ostream operator<<(ostream&, Complication&);
-	friend istream operator>>(istream&, Complication&);
+	friend ostream& operator<<(ostream&, Complication&);
+	friend ostream& operator<<(ostream&, Complication*);
+
+	friend istream& operator>>(istream&, Complication&);
+	friend istream& operator>>(istream&, Complication*);
+
 	bool  operator==(Complication&);
 	~Complication();
 

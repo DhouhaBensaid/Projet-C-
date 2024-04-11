@@ -14,9 +14,12 @@ public:
 	Patient(int=0,string="", string="", int=0, char = 'A');
 	
 	friend ostream& operator<<(ostream&, Patient&);
-
+	friend ostream& operator<<(ostream&, Patient*);
 	friend istream&  operator>>(istream&, Patient&);
+	friend istream& operator>>(istream&, Patient*);
+
 	bool operator==(Patient&);
+	int getNumCin() const{ return this->numCin; };
 	void saisir();
 	void afficher();
 	void ajouterComplication();

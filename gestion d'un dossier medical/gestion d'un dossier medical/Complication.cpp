@@ -17,8 +17,39 @@ void Complication::afficher()
 	cout << "La gravite de la complication : " << gravite << endl;
 
 }
-#include "Complication.h"
+ostream& operator<<(ostream& out, Complication& c) {
+	
+		out << "Id Complication : " << c.id << ",Type Complication : " << c.type << ",Gravite : " << c.gravite;
+		return out;
+}
 
+ostream& operator<<(ostream& out, Complication* c) {
+
+	out << ",Id Complication : " << c->id << ",Type Complication : " << c->type << ",Gravite : " << c->gravite;
+	return out;
+}
+
+istream& operator>>(istream& in, Complication& c) {
+
+	cout << "Donner id du complication : " << endl;
+	in >> c.id;
+	cout << "Donner le type de complication" << endl;
+	in >> c.type;
+	cout << "Donner la gravite de complication" << endl;
+	in >> c.gravite;
+	return in;
+}
+
+istream& operator>>(istream& in, Complication* c) {
+
+	cout << "Donner id du complication : " << endl;
+	in >> c->id;
+	cout << "Donner le type de complication" << endl;
+	in >> c->type;
+	cout << "Donner la gravite de complication" << endl;
+	in >> c->gravite;
+	return in;
+}
 Complication::~Complication() 
 {
 	

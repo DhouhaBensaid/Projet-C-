@@ -16,7 +16,7 @@ public :
     Chirurgien(int=0, string="", string="", int=0, string="");
     void saisir();
 	void afficher();
-    void saisirPatients();
+    void saisirPatients(fstream&);
     void consulterDossier(Secretaire&);
     void AjouterNote(Secretaire&);
     void ajouterComplication();
@@ -26,6 +26,10 @@ public :
     friend ostream& operator<<(ostream&, Chirurgien&);
     friend istream operator>>(istream&, Chirurgien&);
     friend istream& operator==(istream&, Chirurgien&);
+    static void creer(fstream&);
+    void supprimerPatient(fstream&);
+
+    static void afficherAPartirDuFicher(fstream&);
     ~Chirurgien();
 
 };

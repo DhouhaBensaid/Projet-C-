@@ -16,7 +16,12 @@ public:
 	virtual void afficher()=0;
 	virtual void saisir() = 0;
 	friend std::ostream& operator<<(std::ostream&, Personne&);
+	friend std::ostream& operator<<(std::ostream&, Personne*);
+
+
 	friend istream& operator>>(istream&, Personne&);
+	friend istream& operator>>(istream&, Personne*);
+
 	bool operator==(Personne&);
 
 };

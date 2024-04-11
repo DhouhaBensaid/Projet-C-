@@ -10,6 +10,12 @@ ostream& operator<<(ostream& out,  Personne& personne) {
     return out;
 }
 
+ostream& operator<<(ostream& out, Personne* personne) {
+    //cout << "Affichage  des information du personne : " << endl;
+    out << "NumCin: " << personne->numCin << ", Nom: " << personne->nom << ", Prenom: " << personne->prenom << ", NumTel: " << personne->numTel;
+    return out;
+}
+
 istream& operator>>(istream& in, Personne& personne) {
     cout << "Enter NumCin: ";
     in >> personne.numCin;
@@ -21,9 +27,20 @@ istream& operator>>(istream& in, Personne& personne) {
     in >> personne.numTel;
     return in;
 }
+istream& operator>>(istream& in, Personne* personne) {
+    cout << "Enter NumCin: ";
+    in >> personne->numCin;
+    cout << "Enter Nom: ";
+    in >> personne->nom;
+    cout << "Enter Prenom: ";
+    in >> personne->prenom;
+    cout << "Enter NumTel: ";
+    in >> personne->numTel;
+    return in;
+}
 
 bool Personne::operator==( Personne& p) {
-    return (numCin == p.numCin) && (nom == p.nom) && (prenom == p.prenom) && (numTel == p.numTel);
+    return (numCin == p.numCin) ;
 }
 void Personne::afficher()
 {

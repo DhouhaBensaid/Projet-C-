@@ -8,6 +8,8 @@
 #include"date.h"
 #include "Secretaire.h"
 #include "Chirurgien.h"
+#include<fstream>
+#pragma once
 int main()
 {
   
@@ -21,7 +23,7 @@ int main()
 
     // test du classe secreataire
 
-    Secretaire sec;
+    /*Secretaire sec;
     sec.saisir();
     sec.afficher();
     sec.creerDossierChirurgical();
@@ -29,7 +31,7 @@ int main()
     sec.planifierRdv();
     sec.afficherTousLesRendezVous();
     sec.supprimerRdv(1);
-    sec.afficherTousLesRendezVous();
+    sec.afficherTousLesRendezVous();*/
 
 
 
@@ -37,17 +39,20 @@ int main()
 
 
     Chirurgien ch;
-    ch.saisir();
+    fstream f;
+   /* ch.saisir();
     ch.afficher();
 	cout << " \t**************** Affichage du dossier depuis chirurgien ***********************" << endl;
     ch.consulterDossier(sec);
     ch.AjouterNote(sec);
-    ch.consulterDossier(sec);  
-    ch.saisirPatients();
-    ch.modifierInfoPatient();
-    ch.ajouterComplication();
+    ch.consulterDossier(sec);  */
+    ch.creer(f);
+    ch.saisirPatients(f);
+    //ch.modifierInfoPatient();
+   // ch.ajouterComplication();
     ch.afficherTousLesPatients();
-    ch.supprimerComplicationDuPatient();
+    ch.supprimerPatient(f);
+    //ch.supprimerComplicationDuPatient();
 
 
 

@@ -7,7 +7,7 @@ Patient::Patient(int numCin, string nom, string prenom, int numTel, char groupeS
 
 void Patient::saisir()
 {
-	cout << "\t ++++ Saisir du Patient ++++" << endl<<endl;
+	cout << "\t ++++ Saisir du Patient ++++" << endl;
 	char rep;
 	Personne::saisir();
 	cout << "Donner le groupe sanguin du patient : " << endl;
@@ -26,7 +26,7 @@ void Patient::saisir()
 
 void Patient::afficher()
 {
-	cout << "\t ++++ Affichage des information du patient ++++" << endl << endl;
+	cout << "\t ++++Affichage des information du patient ++++" << endl << endl;
 	Personne::afficher();
 	cout << " Groupe sanguin : " <<groupeSanguin<< endl;
 	for (int i = 0; i < tab.size(); i++)
@@ -43,6 +43,17 @@ ostream& operator<<(ostream& out, Patient& p)
 	out << "Groupe Sanguin : " << p.groupeSanguin;
 	return out;
 }
+ostream& operator<<(ostream& out, Patient* p)
+{
+	Personne* personne = p;
+	out << personne;
+	out << ",Groupe Sanguin :" << p->groupeSanguin;
+	for (int i = 0; i < p->tab.size(); i++) {
+		out << p->tab[i];
+	}
+	return out;
+
+}
 istream& operator>>(istream& in, Patient& p)
 {
 	Personne* personne = &p;
@@ -51,6 +62,15 @@ istream& operator>>(istream& in, Patient& p)
 	in >> p.groupeSanguin;
 	return in;
 }
+istream& operator>>(istream& in, Patient* p)
+{
+	Personne* personne = p;
+	in >> personne;
+	cout << "Donner le groupe sanguin" << endl;
+	in >> p->groupeSanguin;
+	return in;
+}
+
 
 bool Patient::operator==(Patient& p)
 {
