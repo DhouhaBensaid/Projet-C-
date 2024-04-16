@@ -12,6 +12,7 @@ class dossierChirurgical :public dossierMedical
 	vector<noteOperatoire*> notes;
 public:
 	dossierChirurgical(string = "", string = "", int = 0, int = 0, int = 0, char = 'F', string = "",string = "", int = 0, int = 0, int = 0);
+	dossierChirurgical(const dossierChirurgical&);
 	void saisir();
 	void afficher();
 	void modifierDate(date);

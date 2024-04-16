@@ -95,7 +95,7 @@ void Chirurgien::supprimerComplicationDuPatient()
 }
 void Chirurgien::creer(fstream& f)
 {
-    f.open("C:\\Users\\marwa\\patients.txt", ios::in | ios::out | ios::trunc);
+    f.open(/*"C:\\Users\\marwa\\patients.txt"*/"C:\\Users\\hp\\Desktop\\patients.txt", ios::in | ios::out | ios::trunc);
     if (!f.is_open()) {
         cout << "Erreur: Impossible d'ouvrir le fichier pour écriture." << endl;
         exit(-1);
@@ -110,7 +110,7 @@ void Chirurgien::supprimerPatient(fstream& f)
 	tab.erase(tab.begin() + pos);
     string ligne;
     bool patientTrouve = false;
-    fstream fichierTemp("C:\\Users\\marwa\\temp.txt", ios::in | ios::out | ios::trunc);
+    fstream fichierTemp(/*"C:\\Users\\marwa\\temp.txt"*/"C:\\Users\\hp\\Desktop\\temp.txt", ios::in | ios::out | ios::trunc);
     if (!fichierTemp.is_open()) {
         cout << "Erreur: Impossible d'ouvrir le fichier temporaire pour écriture." << endl;
         exit(-1);
@@ -136,7 +136,7 @@ void Chirurgien::supprimerPatient(fstream& f)
     // Supprimer le fichier original
     remove("C:\\Users\\marwa\\patients.txt");
     // Renommer le fichier temporaire pour remplacer le fichier original
-    rename("C:\\Users\\marwa\\temp.txt", "C:\\Users\\marwa\\patients.txt");
+    rename(/*"C:\\Users\\marwa\\temp.txt"*/"C:\\Users\\hp\Desktop\\temp.txt", /*"C:\\Users\\marwa\\patients.txt"*/"C:\\Users\\hp\\Desktop\\patients.txt");
 
     if (!patientTrouve) {
         cout << "Patient avec le numero de CIN donne non trouve." << endl;
@@ -145,6 +145,25 @@ void Chirurgien::supprimerPatient(fstream& f)
         cout << "Patient supprime avec succes." << endl;
     }
 }
+
+void Chirurgien::afficherAPartirDuFicher(fstream& f)
+{
+    cout << "***Affichage a partir du ficher****" << endl;
+    f.open(/*"C:\\Users\\marwa\\patients.txt"*/"C:\\Users\\hp\\Desktop\\patients.txt", ios::in);
+    if (!f.is_open()) {
+        cout << "Erreur: Impossible d'ouvrir le fichier pour la lecture." << endl;
+        exit(-1);
+
+    }
+    string ligne;
+    while (getline(f, ligne))
+    {
+        cout << ligne << endl;
+    }
+    f.close();
+ }
+
+
 
 
 Chirurgien::~Chirurgien() {

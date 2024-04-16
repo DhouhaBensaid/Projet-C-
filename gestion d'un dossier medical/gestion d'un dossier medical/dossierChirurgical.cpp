@@ -5,6 +5,13 @@ using namespace std;
 dossierChirurgical::dossierChirurgical(string nomP, string prenomP, int j, int m, int a, char sexe, string specialiste, string  type , int jI, int mI, int aI): dossierMedical(nomP,prenomP, j, m, a,sexe,specialiste), typeIntervention(type) , dateIntervention(jI,mI,aI)
  {
  }
+dossierChirurgical::dossierChirurgical(const dossierChirurgical&dC):dossierMedical(dC),typeIntervention(dC.typeIntervention),dateIntervention(dC.dateIntervention) {
+    for (int i = 0;i < dC.notes.size();i++) {
+        noteOperatoire* nv = new noteOperatoire(*dC.notes[i]);
+        notes.push_back(nv);
+    }
+
+}
 void dossierChirurgical::ajouterNote(noteOperatoire no) 
 {
     noteOperatoire* nvNote= new noteOperatoire(no); 
