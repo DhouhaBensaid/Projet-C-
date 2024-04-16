@@ -52,6 +52,7 @@ int main()
    // ch.ajouterComplication();
     ch.afficherTousLesPatients();
     ch.supprimerPatient(f);
+    ch.afficherAPartirDuFicher(f);
     //ch.supprimerComplicationDuPatient();
 
 
