@@ -1,3 +1,8 @@
-﻿  Chirurgien.cpp
-C:\Users\hp\Desktop\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Chirurgien.cpp(139,44): warning C4129: 'D' : caractère de séquence d'échappement non reconnu
+﻿  gestion d'un dossier medical.cpp
+C:\Users\hp\Desktop\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.h(13,48): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
+  (compiler le fichier source 'gestion%20d'un%20dossier%20medical.cpp')
+  
+C:\Users\hp\Desktop\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.h(14,45): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
+  (compiler le fichier source 'gestion%20d'un%20dossier%20medical.cpp')
+  
   gestion d'un dossier medical.vcxproj -> C:\Users\hp\Desktop\Projet-C-\gestion d'un dossier medical\x64\Debug\gestion d'un dossier medical.exe

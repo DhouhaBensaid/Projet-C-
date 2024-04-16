@@ -6,6 +6,15 @@ using namespace std;
 postChirurgicale::postChirurgicale(string nomP, string prenomP, int j, int m, int a, char sexe, string specialiste, string  type, int jI, int mI, int aI, string heureRd, string objectifRd, string progres)
 	: dossierChirurgical(nomP, prenomP, j, m, a, sexe, specialiste,type,jI,mI,aI), heureRdv(heureRd), objectifsRdv(objectifRd), progresRealises(progres) {}
 
+postChirurgicale::postChirurgicale(const postChirurgicale& p):dossierChirurgical(p),DateRdv(p.DateRdv),heureRdv(p.heureRdv),objectifsRdv(p.objectifsRdv),progresRealises(p.progresRealises)
+{
+	for (int i = 0;i < p.tab.size();i++)
+	{
+		Complication* c = new Complication(*p.tab[i]);
+		tab.push_back(c);
+	}
+}
+
 void postChirurgicale::saisir()
 {
 	char rep;

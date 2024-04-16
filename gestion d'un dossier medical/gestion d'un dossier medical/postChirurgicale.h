@@ -17,6 +17,7 @@ protected:
     vector<Complication*>tab;
 public:
     postChirurgicale(string = "", string = "", int = 0, int = 0, int = 0, char = 'F', string = "", string ="",int =0,int =0,int=0,string = "", string = "", string = "");
+    postChirurgicale(const postChirurgicale&);
     void saisir();
     void afficher();
     void modifierDate(date);

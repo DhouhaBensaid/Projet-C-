@@ -8,6 +8,7 @@
 #include"date.h"
 #include "Secretaire.h"
 #include "Chirurgien.h"
+#include"service.h"
 #include<fstream>
 #pragma once
 int main()
@@ -53,8 +54,8 @@ int main()
     ch.afficherTousLesPatients();
     ch.supprimerPatient(f);
     ch.afficherAPartirDuFicher(f);
-    //ch.supprimerComplicationDuPatient();
-
+    ch.supprimerComplicationDuPatient();
+    
 
 
 

@@ -3,13 +3,11 @@
 #include<iostream>
 #include "date.h"
 #pragma once
-
 using namespace std;
 
 dossierMedical::dossierMedical(string nom, string prenom, int jour, int mois, int annee, char s, string m)
     : nomPatient(nom), prenomPatient(prenom), dateNaiss(jour, mois, annee), sexe(s), specialistConsulte(m) {
 }
-
  ostream& operator<< (ostream& out, dossierMedical& dm)
 {
     out << "\n le nom du patient " << dm.nomPatient;
