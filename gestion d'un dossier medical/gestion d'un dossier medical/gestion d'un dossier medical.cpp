@@ -38,22 +38,26 @@ int main()
     // test du classe chirurgien 
 
 
-    Chirurgien ch;
-    fstream f;
+    //Chirurgien ch;
+    //fstream f;
    /* ch.saisir();
     ch.afficher();
 	cout << " \t**************** Affichage du dossier depuis chirurgien ***********************" << endl;
     ch.consulterDossier(sec);
     ch.AjouterNote(sec);
     ch.consulterDossier(sec);  */
-    ch.creer(f);
-    ch.saisirPatients(f);
+    //ch.creer(f);
+    //ch.saisirPatients(f);
     //ch.modifierInfoPatient();
    // ch.ajouterComplication();
-    ch.afficherTousLesPatients();
-    ch.supprimerPatient(f);
+    //ch.afficherTousLesPatients();
+    //ch.supprimerPatient(f);
     //ch.supprimerComplicationDuPatient();
 
+
+    //test du template
+
+    
 
 
 
