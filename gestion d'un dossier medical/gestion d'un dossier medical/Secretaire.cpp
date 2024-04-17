@@ -10,7 +10,7 @@ void Secretaire::creerDossierChirurgical() {
     do {
 
         cout << "\t<<<< Creation d'un dossier chirurgical >>>>" << endl<<endl;
-        dossierChirurgical* dc = new dossierChirurgical();
+        dossierChirurgical<int>* dc = new dossierChirurgical<int>();
         dc->saisir();
         dossiers.push_back(dc);
 		cout << "Voulez Vous ajouter un dossier chirurgical ? o/n" << endl;
@@ -51,7 +51,7 @@ void Secretaire::supprimerRdv(int pos) {
     }
 }
 
-dossierChirurgical* Secretaire::getDossierChirurgical(int pos)
+dossierChirurgical<int>* Secretaire::getDossierChirurgical(int pos)
 {
     return dossiers[pos];
 }

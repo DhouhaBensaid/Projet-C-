@@ -10,11 +10,11 @@ dossierMedical::dossierMedical(string nom, string prenom, int jour, int mois, in
 }
  ostream& operator<< (ostream& out, dossierMedical& dm)
 {
-    out << "\n le nom du patient " << dm.nomPatient;
-    out << "\n le prenom du patient" << dm.prenomPatient;
-    out << "\n le jour de naissance" << dm.dateNaiss.getJour();
-    out << "\n le mois de naissance" << dm.dateNaiss.getMois();
-    out << "\n l'annee de naissance" << dm.dateNaiss.getAnnee();
+    out << "\n le nom du patient : " << dm.nomPatient;
+    out << "\n le prenom du patient : " << dm.prenomPatient;
+    out << "\n le jour de naissance : " << dm.dateNaiss.getJour();
+    out << "\n le mois de naissance : " << dm.dateNaiss.getMois();
+    out << "\n l'annee de naissance : " << dm.dateNaiss.getAnnee();
     out << "\n le sexe" << dm.sexe;
     out << "\n le specialiste consulte" << dm.specialistConsulte;
     return out;

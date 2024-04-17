@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include"Patient.h"
 #include "postChirurgicale.h"
@@ -65,7 +63,11 @@ int main()
 
     //test du template
 
-    
+    dossierChirurgical<string> d("marwa", "hadhraoui", 16, 4, 2024, 'F', "dentaire", "typeIntervention", 21, 6, 2001, "2");
+    cout << d;
+    dossierChirurgical<int> d1;
+    cin >> d1;
+
 
 
 

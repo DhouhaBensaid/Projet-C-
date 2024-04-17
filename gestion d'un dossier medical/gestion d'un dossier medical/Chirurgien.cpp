@@ -65,7 +65,7 @@ void Chirurgien::AjouterNote(Secretaire& s)
     cin >> note;
 	cout << "donner la position du dossier ou vous allez ajouter la note" << endl;
     cin >> pos;
-	dossierChirurgical* dc = s.getDossierChirurgical(pos);
+	dossierChirurgical<int>* dc = s.getDossierChirurgical(pos);
     dc->ajouterNote(note);
 }
 

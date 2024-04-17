@@ -17,8 +17,8 @@ service::service(const service& s)
             postChirurgicale* d = new postChirurgicale(*dynamic_cast<postChirurgicale*>(s.dossierMed[i]));
             dossierMed.push_back(d);
         }
-        else if (typeid(*s.dossierMed[i]) == typeid(dossierChirurgical)) {
-            dossierChirurgical* dC = new dossierChirurgical(*dynamic_cast<dossierChirurgical*>(s.dossierMed[i]));
+        else if (typeid(*s.dossierMed[i]) == typeid(dossierChirurgical<int>)) {
+            dossierChirurgical<int>* dC = new dossierChirurgical<int>(*dynamic_cast<dossierChirurgical<int>*>(s.dossierMed[i]));
             dossierMed.push_back(dC);
         }
     }
@@ -46,8 +46,8 @@ ostream& operator<<(ostream&out, service & s)
         if (typeid(*s.dossierMed[i]) == typeid(postChirurgicale))
             out << *dynamic_cast<postChirurgicale*>(s.dossierMed[i]);
 
-        else if(typeid(*s.dossierMed[i]) == typeid(dossierChirurgical))
-            out << *dynamic_cast<dossierChirurgical*>(s.dossierMed[i]);
+        else if(typeid(*s.dossierMed[i]) == typeid(dossierChirurgical<int>))
+            out << *dynamic_cast<dossierChirurgical<int>*>(s.dossierMed[i]);
        
     }
 
@@ -100,7 +100,7 @@ istream& operator>>(istream& in, service& s)
             
         }
 
-        cout << "Voulez-vous ajouter un autre élément o/n ";
+        cout << "Voulez-vous ajouter un autre element o/n ";
         in >> rep;
 
     } while (rep == 'o');

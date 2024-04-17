@@ -7,7 +7,7 @@
 #include<vector>
 #include<string>
 using namespace std;
-class postChirurgicale :public dossierChirurgical
+class postChirurgicale :public dossierChirurgical<int>
 {
 protected:
     date DateRdv;
@@ -16,7 +16,7 @@ protected:
     string progresRealises;
     vector<Complication*>tab;
 public:
-    postChirurgicale(string = "", string = "", int = 0, int = 0, int = 0, char = 'F', string = "", string ="",int =0,int =0,int=0,string = "", string = "", string = "");
+    postChirurgicale(string = "", string = "", int = 0, int = 0, int = 0, char = 'F', string = "", string ="",int =0,int =0,int=0,int=0,string = "", string = "", string = "");
     postChirurgicale(const postChirurgicale&);
     void saisir();
     void afficher();

@@ -5,9 +5,8 @@ class noteOperatoire
 {
 	int idNote;
 	string description;
-	int duree;
 public:
-	noteOperatoire(int = 0, string = "", int = 0);
+	noteOperatoire(int = 0, string = "");
 	void saisir();
 	void afficher();
 	friend ostream& operator<< (ostream&, noteOperatoire&);
