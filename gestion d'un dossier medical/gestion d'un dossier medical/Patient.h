@@ -1,7 +1,9 @@
 #pragma once
 #include "Personne.h"
 #include"Complication.h"
+#include"Intervention.h"
 #include<vector>
+#include<list>
 using namespace std;
 
 class Patient : public Personne
@@ -17,7 +19,7 @@ public:
 	friend ostream& operator<<(ostream&, Patient*);
 	friend istream&  operator>>(istream&, Patient&);
 	friend istream& operator>>(istream&, Patient*);
-
+	Patient& operator=(const Patient&);
 	bool operator==(Patient&);
 	int getNumCin() const{ return this->numCin; };
 	void saisir();

@@ -6,12 +6,6 @@
 #include<string>
 #include <iostream>
 using namespace std;
-//template<class T>
-/*class dossierChirurgical;
-template<class T>
-ostream&  operator<<  (ostream&, dossierChirurgical<T>&);
-template<class T>
-istream& operator>> (istream&, dossierChirurgical<T>&);*/
 template<class T>
 class dossierChirurgical :public dossierMedical
 {
@@ -28,17 +22,19 @@ public:
 	void ajouterNote(noteOperatoire no);
 	friend ostream& operator<< <> (ostream&, dossierChirurgical&);
 	friend istream& operator>> <> (istream&, dossierChirurgical&);
-		
+	dossierChirurgical<T>& operator=(const dossierChirurgical<T>&);
 	bool operator==(dossierChirurgical&);
 	~dossierChirurgical();
 };
 
 template<class T>
-dossierChirurgical<T>::dossierChirurgical(string nomP, string prenomP, int j, int m, int a, char sexe, string specialiste, string  type, int jI, int mI, int aI,T duree) : dossierMedical(nomP, prenomP, j, m, a, sexe, specialiste), typeIntervention(type), dateIntervention(jI, mI, aI),dureeIntervention(duree)
+dossierChirurgical<T>::dossierChirurgical(string nomP, string prenomP, int j, int m, int a, char sexe, string specialiste, string  type, int jI, int mI, int aI,T duree) :
+	dossierMedical(nomP, prenomP, j, m, a, sexe, specialiste), typeIntervention(type), dateIntervention(jI, mI, aI),dureeIntervention(duree)
 {
 }
 template<class T>
-dossierChirurgical<T>::dossierChirurgical(const dossierChirurgical<T>& dC) :dossierMedical(dC), typeIntervention(dC.typeIntervention), dateIntervention(dC.dateIntervention),dureeIntervention(dC.dureeIntervention) {
+dossierChirurgical<T>::dossierChirurgical(const dossierChirurgical<T>& dC) :
+	dossierMedical(dC), typeIntervention(dC.typeIntervention), dateIntervention(dC.dateIntervention),dureeIntervention(dC.dureeIntervention) {
 	for (int i = 0;i < dC.notes.size();i++) {
 		noteOperatoire* nv = new noteOperatoire(*dC.notes[i]);
 		notes.push_back(nv);
@@ -112,6 +108,23 @@ istream& operator >> (istream& in, dossierChirurgical<T>& dossier) {
 	in >> dossier.dateIntervention;
 	return in;
 }
+template<class T>
+dossierChirurgical<T>& dossierChirurgical<T>::operator=(const dossierChirurgical<T>& dC) 
+{
+	if (this != &dC) {
+		dossierMedical::operator=(dC);
+		typeIntervention = dC.typeIntervention;
+		dateIntervention = dC.dateIntervention;
+		dureeIntervention = dC.dureeIntervention;
+		for (int i = 0;i < dC.notes.size();i++)
+			delete dC.notes[i];
+		notes.clear();
+		for (int i = 0;i < dC.notes.size();i++)
+			notes.push_back(new noteOperatoire(*dC.notes[i]));
+	}
+	return *this;
+}
+
 template<class T>
 bool dossierChirurgical<T>::operator==(dossierChirurgical& dCh) {
 	return (typeIntervention == dCh.typeIntervention && dateIntervention == dCh.dateIntervention);

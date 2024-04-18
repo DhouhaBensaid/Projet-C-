@@ -23,6 +23,7 @@ public:
     void modifierDate(date);
     void ajouterComplication();
     friend ostream& operator<< (ostream&, postChirurgicale&);
+    postChirurgicale& operator= (const postChirurgicale&);
     friend istream& operator >>(istream&, postChirurgicale&);
     bool operator==(postChirurgicale&);
     ~postChirurgicale();

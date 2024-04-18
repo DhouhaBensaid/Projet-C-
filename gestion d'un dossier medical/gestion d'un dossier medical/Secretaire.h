@@ -21,6 +21,7 @@ public :
     friend ostream& operator<<(ostream&, Secretaire&);
     friend istream& operator>>(istream&, Secretaire&);
     bool  operator==( Secretaire&);
+    Secretaire& operator=(const Secretaire&);
     void saisir();
 	void afficher();
     void consulterDossier(int& pos);

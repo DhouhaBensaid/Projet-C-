@@ -162,6 +162,22 @@ void Chirurgien::afficherAPartirDuFicher(fstream& f)
     }
     f.close();
  }
+Chirurgien& Chirurgien::operator=(const Chirurgien& c)
+{
+    if (this != &c)
+        this->numCin = c.numCin;
+        this->nom = c.nom;
+        this->prenom = c.prenom;
+        this->numTel = c.numTel;
+        this->specialite = c.specialite;
+        for (int i = 0;i<c.tab.size();i++) 
+            delete c.tab[i];
+        tab.clear();
+        for (int i = 0;i < c.tab.size();i++) 
+            tab.push_back(new Patient(*c.tab[i]));
+        
+    return *this;
+}
 
 
 

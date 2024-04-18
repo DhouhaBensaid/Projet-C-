@@ -54,6 +54,7 @@ ostream& operator<<(ostream& out, Patient* p)
 	return out;
 
 }
+
 istream& operator>>(istream& in, Patient& p)
 {
 	Personne* personne = &p;
@@ -70,6 +71,24 @@ istream& operator>>(istream& in, Patient* p)
 	in >> p->groupeSanguin;
 	return in;
 }
+Patient& Patient::operator=(const Patient& p)
+{
+	if (this != &p)
+	{
+		this->numCin = p.numCin;
+		this->nom = p.nom;
+		this->prenom = p.prenom;
+		this->numTel = p.numTel;
+		this->groupeSanguin = p.groupeSanguin;
+		for (int i = 0;i < p.tab.size();i++) 
+			delete p.tab[i];
+		tab.clear();
+		for (int i = 0;i < p.tab.size();i++) 
+			tab.push_back(new Complication(*p.tab[i]));
+	}
+	return *this;
+}
+
 
 
 bool Patient::operator==(Patient& p)

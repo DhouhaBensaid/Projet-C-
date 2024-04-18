@@ -11,7 +11,6 @@ class Complication
 public:
 
 	Complication(int=0,string="", string="");
-	//Complication();
 	void saisir();
 	void afficher();
 	int getId() { return id; };

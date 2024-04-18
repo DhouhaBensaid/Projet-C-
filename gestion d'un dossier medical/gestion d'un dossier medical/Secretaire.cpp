@@ -69,6 +69,29 @@ istream& operator>> (istream& in, Secretaire& s) {
     in >> s.salaire;
     return in;
 }
+Secretaire& Secretaire::operator=(const Secretaire& s)
+{
+    if (this != &s)
+    {
+        this->numCin = s.numCin;
+        this->nom = s.nom;
+        this->prenom = s.prenom;
+        this->numTel = s.numTel;
+        this->salaire = s.salaire;
+        for (int i = 0;i<s.tab.size();i++) 
+            delete s.tab[i];
+        tab.clear();
+        for (int i = 0;i < s.tab.size();i++) 
+            tab.push_back(new RendezVous(*s.tab[i]));
+        
+        for (int i = 0;i < s.dossiers.size();i++) 
+            delete s.dossiers[i];
+        dossiers.clear();
+        for (int i = 0;i < s.dossiers.size();i++) 
+            dossiers.push_back(new dossierChirurgical<int>(*s.dossiers[i]));
+    }
+    return *this;
+}
 
 bool Secretaire::operator==(Secretaire& s) {
 	bool res = Personne::operator==(s);

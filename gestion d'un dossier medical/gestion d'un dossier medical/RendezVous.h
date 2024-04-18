@@ -11,7 +11,7 @@ public:
 	void afficher();
 	friend ostream& operator<<(ostream&, RendezVous&);
 	friend istream& operator>>(istream&, RendezVous&);
-	bool  operator==(RendezVous&);
+	bool operator==(RendezVous&);
 	~RendezVous();
 };
 

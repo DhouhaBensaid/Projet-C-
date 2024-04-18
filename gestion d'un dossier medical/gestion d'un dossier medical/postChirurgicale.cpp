@@ -88,6 +88,29 @@ istream& operator >>(istream& in, postChirurgicale& post)
 	in >>post.objectifsRdv;
 	return in;
 }
+postChirurgicale& postChirurgicale::operator= (const postChirurgicale& pc)
+{
+	if (this != &pc)
+		{
+			
+			DateRdv = pc.DateRdv;
+			heureRdv = pc.heureRdv;
+			objectifsRdv = pc.objectifsRdv;
+			progresRealises = pc.progresRealises;
+
+			for (int i = 0;i<pc.tab.size();i++) 
+				delete pc.tab[i];
+			tab.clear();
+			for (int i = 0;i < pc.tab.size();i++) 
+			{
+				Complication* newComp = new Complication(*pc.tab[i]);
+				tab.push_back(newComp);
+			}
+		}
+
+		return *this;
+	
+}
 bool postChirurgicale::operator == (postChirurgicale& post) 
 {
 	return (DateRdv == post.DateRdv &&

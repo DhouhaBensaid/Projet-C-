@@ -26,6 +26,7 @@ public :
     friend ostream& operator<<(ostream&, Chirurgien&);
     friend istream operator>>(istream&, Chirurgien&);
     friend istream& operator==(istream&, Chirurgien&);
+    Chirurgien& operator=(const Chirurgien&);
     static void creer(fstream&);
     void supprimerPatient(fstream&);
 
