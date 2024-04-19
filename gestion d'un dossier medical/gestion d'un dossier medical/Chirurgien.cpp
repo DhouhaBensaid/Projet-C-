@@ -136,8 +136,7 @@ void Chirurgien::supprimerPatient(fstream& f)
     // Supprimer le fichier original
     remove("C:\\Users\\marwa\\patients.txt");
     // Renommer le fichier temporaire pour remplacer le fichier original
-    rename(/*"C:\\Users\\marwa\\temp.txt"*/"C:\\Users\\hp\Desktop\\temp.txt", /*"C:\\Users\\marwa\\patients.txt"*/"C:\\Users\\hp\\Desktop\\patients.txt");
-
+    rename (/*"C:\\Users\\marwa\\temp.txt"*/"C:\\Users\\hp\Desktop\\temp.txt", /*"C:\\Users\\marwa\\patients.txt"*/"C:\\Users\\hp\\Desktop\\patients.txt");
     if (!patientTrouve) {
         cout << "Patient avec le numero de CIN donne non trouve." << endl;
     }

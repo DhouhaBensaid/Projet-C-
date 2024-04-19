@@ -3,7 +3,7 @@
 using namespace std;
 class Intervention
 {
-    int id;
+    int idIntervention;
     string nom;
     int duree; 
 

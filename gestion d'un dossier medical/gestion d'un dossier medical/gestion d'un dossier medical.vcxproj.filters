@@ -57,6 +57,9 @@
     <ClCompile Include="Intervention.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SalleAttente.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dossierMedical.h">
@@ -96,6 +99,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Intervention.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SalleAttente.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

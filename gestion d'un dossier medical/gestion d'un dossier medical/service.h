@@ -13,7 +13,7 @@ public:
 	int tailleDossierMed(){ return dossierMed.size();}
 	int taillePersonne() { return personne.size(); }
 	void saisir();
-	void afficher();
+	void afficher(service);
 	friend ostream& operator<<(ostream&, service&);
 	friend istream& operator>>(istream&, service&);
 	~service();

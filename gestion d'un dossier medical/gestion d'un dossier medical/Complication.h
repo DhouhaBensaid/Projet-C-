@@ -5,7 +5,7 @@
 using namespace std;
 class Complication
 {
-	int id;
+	int idComplication;
 	string type;
 	string gravite;
 public:
@@ -13,7 +13,7 @@ public:
 	Complication(int=0,string="", string="");
 	void saisir();
 	void afficher();
-	int getId() { return id; };
+	int getIdComplication() { return idComplication; }
 	friend ostream& operator<<(ostream&, Complication&);
 	friend ostream& operator<<(ostream&, Complication*);
 

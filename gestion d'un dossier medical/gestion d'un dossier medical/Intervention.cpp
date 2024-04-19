@@ -1,13 +1,13 @@
 #include "intervention.h"
 #include<iostream>
 using namespace std;
-Intervention::Intervention(int id,  string nom, int duree) : id(id), nom(nom), duree(duree) 
+Intervention::Intervention(int id,  string nom, int duree) : idIntervention(id), nom(nom), duree(duree) 
 {}
 
 
 void Intervention::saisir() {
     cout << "donner ID de l intervention : " << endl;
-    cin >> id;
+    cin >> idIntervention;
     cout << " donner nom de l intervention : " << endl;
     cin >> nom;
     cout << "donner duree de l intervention : " << endl;
@@ -15,18 +15,18 @@ void Intervention::saisir() {
 }
 
 void Intervention::afficher()  {
-    cout << "ID de l  intervention : " << id << endl;
+    cout << "ID de l  intervention : " << idIntervention << endl;
     cout << "Nom de l intervention : " << nom << endl;
     cout << "Duree de l intervention : " << duree << endl;
 }
 
 ostream& operator<<(ostream& out, Intervention& intervention) {
-    out << "ID : " << intervention.id << ", Nom : " << intervention.nom << ", Duree : " << intervention.duree;
+    out << "ID : " << intervention.idIntervention << ", Nom : " << intervention.nom << ", Duree : " << intervention.duree;
     return out;
 }
 istream& operator>>(istream& in, Intervention& intervention) {
     cout << "ID de l intervention : ";
-    in >> intervention.id;
+    in >> intervention.idIntervention;
     cout << "Nom de l intervention : ";
     in >> intervention.nom;
     cout << "Duree de l intervention : ";

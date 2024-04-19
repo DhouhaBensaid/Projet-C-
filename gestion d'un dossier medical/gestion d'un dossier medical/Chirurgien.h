@@ -31,7 +31,7 @@ public :
     void supprimerPatient(fstream&);
 
     static void afficherAPartirDuFicher(fstream&);
-    ~Chirurgien();
+    ~Chirurgien(); 
 
 };
 

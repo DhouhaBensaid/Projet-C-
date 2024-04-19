@@ -21,6 +21,8 @@ public:
         virtual void modifierPatient(Patient p);
         friend ostream& operator<<(ostream&, dossierMedical&);
         friend istream& operator>>(istream&, dossierMedical&);
+        string getNomPatient() const { return this->nomPatient; }
+
 
         bool operator==(dossierMedical&);
         virtual ~dossierMedical();

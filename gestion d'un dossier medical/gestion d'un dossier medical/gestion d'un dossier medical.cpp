@@ -6,6 +6,7 @@
 #include"date.h"
 #include "Secretaire.h"
 #include "Chirurgien.h"
+#include"SalleAttente.h"
 #include"service.h"
 #include<fstream>
 #pragma once
@@ -63,10 +64,16 @@ int main()
 
     //test du template
 
-    dossierChirurgical<string> d("marwa", "hadhraoui", 16, 4, 2024, 'F', "dentaire", "typeIntervention", 21, 6, 2001, "2");
+   /*dossierChirurgical<string> d("marwa", "hadhraoui", 16, 4, 2024, 'F', "dentaire", "typeIntervention", 21, 6, 2001, "2");
     cout << d;
     dossierChirurgical<int> d1;
-    cin >> d1;
+    cin >> d1;*/
+    //test class service
+    /*service s;
+    s.saisir();
+    s.afficher(s);*/
+  
+
 
 
 

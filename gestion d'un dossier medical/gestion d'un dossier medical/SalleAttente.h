@@ -13,7 +13,7 @@ public:
 	~SalleAttente();
 	friend ostream& operator<< (ostream&, SalleAttente&);
 	friend istream& operator>> (istream&, SalleAttente&);
-	SalleAttente operator==(SalleAttente&);
+	RendezVous operator==(const RendezVous);
 	RendezVous operator <(const RendezVous);
 	void inserer(pair<int, Patient>);
 	map<int, Patient>::iterator rechercher(int);//NumCIN
@@ -24,8 +24,8 @@ public:
 	void supprimer(int);//numCin
 	void supprimer(string);//nom
 
-	void affichertoutRdv();//for-each
-	void ajouterRdv();//pushback
+	void afficherToutRdv();//for-each
+	void ajouterRdv(RendezVous);//pushback
 	bool supprimerDoublonsRdv(RendezVous);//remove
 	RendezVous rechercherRdv(date);//find
 	int nombreRdv();//count

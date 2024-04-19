@@ -139,6 +139,7 @@
     <ClCompile Include="Personne.cpp" />
     <ClCompile Include="postChirurgicale.cpp" />
     <ClCompile Include="RendezVous.cpp" />
+    <ClCompile Include="SalleAttente.cpp" />
     <ClCompile Include="Secretaire.cpp" />
     <ClCompile Include="service.cpp" />
   </ItemGroup>
@@ -154,6 +155,7 @@
     <ClInclude Include="Personne.h" />
     <ClInclude Include="postChirurgicale.h" />
     <ClInclude Include="RendezVous.h" />
+    <ClInclude Include="SalleAttente.h" />
     <ClInclude Include="Secretaire.h" />
     <ClInclude Include="service.h" />
   </ItemGroup>

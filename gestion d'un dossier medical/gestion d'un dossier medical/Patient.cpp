@@ -105,7 +105,7 @@ void Patient::supprimerComplication(int id)
 {
 	for (int i = 0;i < tab.size();i++)
 	{
-		if (tab[i]->getId() == id)
+		if (tab[i]->getIdComplication() == id)
 			tab.erase(tab.begin() + i);
 		else
 			cout << "Cette complication ou l id est" << id << "n'existe pas " << endl;

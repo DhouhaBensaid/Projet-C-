@@ -1,8 +1,192 @@
-﻿  gestion d'un dossier medical.cpp
-C:\Users\hp\Desktop\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.h(13,48): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
-  (compiler le fichier source 'gestion%20d'un%20dossier%20medical.cpp')
+﻿  SalleAttente.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,65): error C2676: '==' binaire : 'const _Ty' ne définit pas cet opérateur ou une conversion vers un type acceptable pour l'opérateur prédéfini
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,65): error C2676:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,65): error C2676:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,65): error C2676:             _Ty=RendezVous
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,65): error C2676:         ]
+  (compiler le fichier source 'SalleAttente.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1875,17):
+  est peut-être 'bool std::operator ==(const std::list<_Ty,_Alloc> &,const std::list<_Ty,_Alloc> &)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::list<_Ty,_Alloc> &,const std::list<_Ty,_Alloc> &)' : nous n’avons pas pu déduire modèle de l'argument 'const std::list<_Ty,_Alloc> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vector(2229,30):
+  ou       'bool std::operator ==(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)' : nous n’avons pas pu déduire modèle de l'argument 'const std::vector<_Ty,_Alloc> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3524,17):
+  ou       'bool std::operator ==(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const std::unique_ptr<_Ty,_Dx> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3518,30):
+  ou       'bool std::operator ==(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const std::unique_ptr<_Ty,_Dx> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3470,30):
+  ou       'bool std::operator ==(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)' : nous n’avons pas pu déduire modèle de l'argument 'const std::unique_ptr<_Ty,_Dx> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(1890,17):
+  ou       'bool std::operator ==(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const std::shared_ptr<_Ty> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(1879,17):
+  ou       'bool std::operator ==(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const std::shared_ptr<_Ty> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(1842,17):
+  ou       'bool std::operator ==(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const std::shared_ptr<_Ty> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\iterator(488,17):
+  ou       'bool std::operator ==(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)' : nous n’avons pas pu déduire modèle de l'argument 'const std::istreambuf_iterator<_Elem,_Traits> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\iterator(306,17):
+  ou       'bool std::operator ==(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xstring(5066,17):
+  ou       'bool std::operator ==(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const _Elem *const ' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xstring(5047,30):
+  ou       'bool std::operator ==(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const ) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const ) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const std::basic_string<_Elem,_Traits,_Alloc> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xstring(5041,30):
+  ou       'bool std::operator ==(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const std::basic_string<_Elem,_Traits,_Alloc> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\map(633,17):
+  ou       'bool std::operator ==(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)' : nous n’avons pas pu déduire modèle de l'argument 'const std::multimap<_Kty,_Ty,_Pr,_Alloc> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\map(400,17):
+  ou       'bool std::operator ==(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)' : nous n’avons pas pu déduire modèle de l'argument 'const std::map<_Kty,_Ty,_Pr,_Alloc> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xmemory(1042,30):
+  ou       'bool std::operator ==(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept' : nous n’avons pas pu déduire modèle de l'argument 'const std::allocator<_Ty> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(4228,5):
+  ou       'bool std::operator ==(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)' : nous n’avons pas pu déduire modèle de l'argument 'const std::move_iterator<_Iter> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(1686,5):
+  ou       'bool std::operator ==(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)' : nous n’avons pas pu déduire modèle de l'argument 'const std::reverse_iterator<_BidIt> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\tuple(872,27):
+  ou       'bool std::operator ==(const std::tuple<_Types...> &,const std::tuple<_Types...> &)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::tuple<_Types...> &,const std::tuple<_Types...> &)' : nous n’avons pas pu déduire modèle de l'argument 'const std::tuple<_Types...> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(490,27):
+  ou       'bool std::operator ==(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,58):
+  	'bool std::operator ==(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)' : nous n’avons pas pu déduire modèle de l'argument 'const std::pair<_Ty1,_Ty2> &' de 'const _Ty'.
+          with
+          [
+              _Ty=RendezVous
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,65):
+  le contexte d’instanciation du modèle (le plus ancien) est
+  	C:\Users\hp\Desktop\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\SalleAttente.h(10,18):
+  	voir la référence à l'instanciation classe modèle 'std::list<RendezVous,std::allocator<RendezVous>>' en cours de compilation
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1662,10):
+  	pendant la compilation de la fonction membre classe modèle 'auto std::list<RendezVous,std::allocator<RendezVous>>::remove(const _Ty &)'
+          with
+          [
+              _Ty=RendezVous
+          ]
   
-C:\Users\hp\Desktop\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.h(14,45): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
-  (compiler le fichier source 'gestion%20d'un%20dossier%20medical.cpp')
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1674,22): error C2451: une expression conditionnelle de type 'void' est non valide
+  (compiler le fichier source 'SalleAttente.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1674,22):
+  Les expressions de type void ne peuvent pas être converties en d'autres types
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1674,22):
+  le contexte d’instanciation du modèle (le plus ancien) est
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\list(1663,16):
+  	voir la référence à l'instanciation de la fonction modèle 'auto std::list<RendezVous,std::allocator<RendezVous>>::remove_if<std::list<RendezVous,std::allocator<RendezVous>>::remove::<lambda_1>>(_Pr1)' en cours de compilation
+          with
+          [
+              _Pr1=std::list<RendezVous,std::allocator<RendezVous>>::remove::<lambda_1>
+          ]
   
-  gestion d'un dossier medical.vcxproj -> C:\Users\hp\Desktop\Projet-C-\gestion d'un dossier medical\x64\Debug\gestion d'un dossier medical.exe
+C:\Users\hp\Desktop\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\SalleAttente.cpp(24,5): warning C4834: abandon de la valeur de retour de la fonction avec l’attribut [[nodiscard]]

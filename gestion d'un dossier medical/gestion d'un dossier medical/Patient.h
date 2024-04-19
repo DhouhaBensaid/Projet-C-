@@ -22,6 +22,7 @@ public:
 	Patient& operator=(const Patient&);
 	bool operator==(Patient&);
 	int getNumCin() const{ return this->numCin; };
+
 	void saisir();
 	void afficher();
 	void ajouterComplication();
