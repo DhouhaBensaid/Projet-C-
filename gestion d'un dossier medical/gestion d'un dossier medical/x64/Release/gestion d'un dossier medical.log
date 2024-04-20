@@ -6,8 +6,8 @@ C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medic
   (compiling source file 'gestion%20d'un%20dossier%20medical.cpp')
   
   Generating code
-  582 of 976 functions (59.6%) were compiled, the rest were copied from previous compilation.
+  582 of 985 functions (59.1%) were compiled, the rest were copied from previous compilation.
     1 functions were new in current compilation
-    75 functions had inline decision re-evaluated but remain unchanged
+    76 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   gestion d'un dossier medical.vcxproj -> C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\x64\Release\gestion d'un dossier medical.exe

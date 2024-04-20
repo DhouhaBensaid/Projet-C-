@@ -30,7 +30,8 @@ public:
 	list<RendezVous>::iterator rechercherRdv(RendezVous&);				
 	int nombreRdv();						
 	void insererRdv();							
-	void supprimerToutRdv();				
+	void supprimerToutRdv();
+	void trierListRdv();
 	
 
 

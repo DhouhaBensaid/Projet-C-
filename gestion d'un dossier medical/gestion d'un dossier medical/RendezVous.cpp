@@ -43,5 +43,11 @@ istream& operator>>(istream& in, RendezVous& rdv)
 bool RendezVous::operator==(const RendezVous& rdv) const {
 	return (heureRdv == rdv.heureRdv);
 }
+bool RendezVous::operator<(const RendezVous& rdv) const {
+	if (heureRdv < rdv.heureRdv)
+		return true;
+	else return false;
+}
+
 
 RendezVous::~RendezVous() {};

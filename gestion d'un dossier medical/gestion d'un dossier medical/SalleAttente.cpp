@@ -72,7 +72,12 @@ void SalleAttente::supprimerToutRdv()
     cout << "Suppression de tous les rendez-vous dans la salle d'attente." << endl;
     l.clear();
 }
-
+void SalleAttente::trierListRdv()
+{
+    cout << "Trier les rendez-vous dans la salle d'attente par heure" << endl;
+    l.sort();
+    afficherToutRdv();
+}
 //Map functions
 ostream& operator<< (ostream& out , SalleAttente& s)
 {

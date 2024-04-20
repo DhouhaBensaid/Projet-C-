@@ -15,6 +15,8 @@ public:
 	friend ostream& operator<<(ostream&, RendezVous&);
 	friend istream& operator>>(istream&, RendezVous&);
 	bool operator==(const RendezVous& rdv) const;
+	bool operator<(const RendezVous& rdv) const;
+
 	static int getTotalRdv() { return totalRdv; }
 
 	~RendezVous();

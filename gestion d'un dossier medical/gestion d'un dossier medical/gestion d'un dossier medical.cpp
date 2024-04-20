@@ -44,6 +44,8 @@ int main()
 
     // -----list test functions----
     s.ajouterRdv();
+    //trier les rendez vous
+    s.trierListRdv();
     //test du methode statique 
     //--------------------------------------------------------------
     int totalRdv = RendezVous::getTotalRdv();
