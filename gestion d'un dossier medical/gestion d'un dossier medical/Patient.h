@@ -22,11 +22,14 @@ public:
 	Patient& operator=(const Patient&);
 	bool operator==(Patient&);
 	int getNumCin() const{ return this->numCin; };
+	string getNom() { return this->nom; };
+	void setNumTel(int numTel) { this->numTel = numTel; }
 
 	void saisir();
 	void afficher();
 	void ajouterComplication();
 	void supprimerComplication(int);
+	void modifierNumeroTel(int);
 	~Patient();
 };
 

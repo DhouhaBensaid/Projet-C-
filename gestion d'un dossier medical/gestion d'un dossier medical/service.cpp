@@ -40,7 +40,7 @@ service::service(const service& s)
         }
     }
 }
-ostream& operator<<(ostream&out, service & s)
+ostream& operator<<(ostream& out, service& s)
 {
     for (int i = 0; i < s.dossierMed.size(); i++)
     {
@@ -137,14 +137,16 @@ void service::saisir()
                     break;
                 }
                 case '3': {
-                    int DateRdv;
-                    cout << "Entrez la date du rendez-vous à supprimer : " << endl;
-                    cin >> DateRdv;
-                    nvSecretaire->supprimerRdv(DateRdv);
+                    int pos;
+                    cout << "Entrez la position du rendez-vous à supprimer : " << endl;
+                    cin >> pos;
+                    nvSecretaire->supprimerRdv(pos);
                     break;
                 }
                 case '4': {
                     int pos;
+                    cout << "Donner la position du dossier à consulter : ";
+                    cin >> pos;
                     nvSecretaire->consulterDossier(pos);
                     break;
                 }
@@ -171,99 +173,65 @@ void service::saisir()
         case '3': {
 
             Chirurgien* nvChirurgien = new Chirurgien();
+            fstream f;
+            nvChirurgien->creer(f);
             nvChirurgien->saisir();
-            personne.push_back(nvChirurgien);
             char choixC;
             do {
-                cout << "___Menu Chirurgien :____" << endl;
-                cout << "1. Saisir les informations d un patient" << endl;
-                cout << "2. Consulter un dossier chirurgical " << endl;
-                cout << "3. Ajouter une note dans un dossier chirurgical " << endl;
-                cout << "4. Ajouter une complication a un patient" << endl;
-                cout << "5. Modifier les informations d un patient" << endl;
-                cout << "6. Supprimer une complication d un patient" << endl;
-                cout << "7. Afficher tous les patients" << endl;
-                cout << "8. Creer un fichier de chirurgien" << endl;
-                cout << "9. Supprimer un patient" << endl;
+                cout << "____Menu Chirurgien :____" << endl;
+                cout << "1. Saisir les informations d un patient et les mettre dans un fichier txt" << endl;
+                cout << "2. Ajouter une complication a un patient" << endl;
+                cout << "3. Modifier les informations d un patient" << endl;
+                cout << "4. Supprimer une complication d un patient" << endl;
+                cout << "5. Afficher tous les patients" << endl;
+                cout << "6. Supprimer un patient" << endl;
+                cout << "7. Afficher les patients à partir du fichier" << endl;
                 cout << "q. Quitter" << endl;
-
                 cout << "Votre choix : ";
                 cin >> choixC;
 
                 switch (choixC) {
                 case '1': {
 
-                    fstream f("C:\\Users\\hp\\Desktop\\patients.txt", ios::in);
-                    if (f.is_open()) {
-                        nvChirurgien->saisirPatients(f);
-                        (f);
-                        f.close();
-                    }
-                    break;
+                   
+                    nvChirurgien->saisirPatients(f);
                     break;
                 }
+                  
                 case '2': {
-                    Secretaire s;
-                    nvChirurgien->consulterDossier(s);
-                    break;
-                }
-                case '3': {
-                    Secretaire s;
-                    nvChirurgien->AjouterNote(s);
-                    break;
-                }
-                case '4': {
                     nvChirurgien->ajouterComplication();
                     break;
                 }
-                case '5': {
-                    nvChirurgien->modifierInfoPatient();
+                case '3': {
+                    nvChirurgien->modifierInfoPatient(f);
                     break;
                 }
-                case '6': {
+                case '4': {
                     nvChirurgien->supprimerComplicationDuPatient();
                     break;
                 }
-                case '7': {
+                case '5': {
                     nvChirurgien->afficherTousLesPatients();
                     break;
                 }
-                case '8': {
-                    fstream fichier("nom_du_fichier.txt", ios::in | ios::out); // Ouverture du fichier en mode lecture/écriture
-                    if (fichier.is_open()) {
-                        Chirurgien::creer(fichier); // Appel de la fonction avec le fichier ouvert
-                        fichier.close(); // Fermeture du fichier après utilisation
-                    }
-                    else {
-                        cout << "Erreur : Impossible d'ouvrir le fichier." << endl;
-                    }
+
+                case '6': {
+                    nvChirurgien->supprimerPatient(f);
                     break;
                 }
 
-                case '9': {
-                    fstream f("C:\\Users\\hp\\Desktop\\patients.txt", ios::in ); 
-                    if (f.is_open()) {
-                        nvChirurgien->supprimerPatient(f);
-                        f.close(); 
-                    }
-                    break;
-                }
-
-                case '10': {
-                    fstream f("C:\\Users\\hp\\Desktop\\patients.txt", ios::in | ios::out); 
-                    if (f.is_open()) {
+                case '7': {
                         nvChirurgien->afficherAPartirDuFicher(f);
-                        f.close(); 
-                    }
                     break;
                 }
-
                 case 'q':
                     cout << "Sortie du menu Chirurgien" << endl;
                     break;
                 default:
                     cout << "Choix invalide,Veuillez choisir une option valide" << endl;
                 }
+                personne.push_back(nvChirurgien);
+
             } while (choixC != 'q');
             break;
         }
@@ -272,6 +240,7 @@ void service::saisir()
             dossierChirurgical<int>* nvDossierChirurgical = new dossierChirurgical<int>();
             nvDossierChirurgical->saisir();
             dossierMed.push_back(nvDossierChirurgical);
+
             break;
         }
 
@@ -371,20 +340,21 @@ void service::afficher(service s) {
         }
         case '4': {
             cout << "Liste des dossiers chirurgicaux :" << endl;
-            for (int i = 0; i < s.dossierMed.size(); i++) {
-                dossierChirurgical<int>* dossier = dynamic_cast<dossierChirurgical<int>*>(s.dossierMed[i]);
+            for (int i = 0; i < dossierMed.size(); i++) {
+                dossierChirurgical<int>* dossier = dynamic_cast<dossierChirurgical<int>*>(dossierMed[i]);
                 if (dossier) {
-                    dossier->afficher();
+                    dossierMed[i]->afficher();
                 }
             }
             break;
         }
         case '5': {
             cout << "Liste des dossiers post chirurgicaux :" << endl;
-            for (int i = 0; i < s.dossierMed.size(); i++){
-                postChirurgicale* dossierPostChirurgical = dynamic_cast<postChirurgicale*>(s.dossierMed[i]);
+            for (int i = 0; i < dossierMed.size(); i++){
+                cout << *(dossierMed[i]) << endl;
+                postChirurgicale* dossierPostChirurgical = dynamic_cast<postChirurgicale*>(dossierMed[i]);
                 if (dossierPostChirurgical) {
-                    dossierPostChirurgical->afficher();
+                   dossierMed[i]->afficher();
                 }
             }
             break;
@@ -396,53 +366,6 @@ void service::afficher(service s) {
             cout << "Choix invalide. Veuillez choisir une option valide." << endl;
         }
     } while (choix != 'Q' && choix != 'q');
-}
-
-istream& operator>>(istream& in, service& s)
-{
-    int choix;
-    char rep;
-    do
-    {
-        cout << "\n Taper 1:Dossier medical, 2:Personne" << endl;// dossier chirurgical ou post...
-        in >> choix;
-        if (choix == 1) {
-            dossierMedical* d = new postChirurgicale(); 
-            in >> *d;
-            s.dossierMed.push_back(d);
-        }
-        else {
-            int choixPers;
-            cout << "\n Taper 1:Patient, 2:Chirurgien, 3:Secretaire" << endl;
-            in >> choixPers;
-            if (choixPers == 1)
-            {
-                Personne* p = new Patient();
-                in >> *p;
-
-                s.personne.push_back(p);
-            }
-            else if (choixPers == 2)
-            {
-                Personne* p = new Chirurgien();
-                in >> *p;
-                s.personne.push_back(p);
-            }
-            else if (choixPers == 3) {
-                Personne* p = new Secretaire();
-                in >> *p;
-                s.personne.push_back(p);
-            }
-            else 
-                cout << "Choix invalide" << endl;
-            
-        }
-
-        cout << "Voulez-vous ajouter un autre element o/n ";
-        in >> rep;
-
-    } while (rep == 'o');
-    return in;
 }
 
 

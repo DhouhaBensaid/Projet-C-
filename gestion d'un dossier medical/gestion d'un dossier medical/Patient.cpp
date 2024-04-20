@@ -112,6 +112,10 @@ void Patient::supprimerComplication(int id)
 	}
 }
 
+void Patient::modifierNumeroTel(int numTel)
+{
+	this->numTel = numTel;
+}
 Patient::~Patient() {
 	for (int i = 0;i < tab.size();i++)
 		delete tab[i];

@@ -1,6 +1,7 @@
 #include "Chirurgien.h"
 #include <iostream>
 #include<fstream>
+#include<string>
 Chirurgien::Chirurgien(int numCin, string nom, string prenom, int numTel, string specialite) :Personne(numCin, nom, prenom, numTel), specialite(specialite)
 {}
 
@@ -40,14 +41,59 @@ void Chirurgien::saisirPatients(fstream& f)
         cin >> rep;
     } while (rep == 'o');
 }
-void Chirurgien::modifierInfoPatient()
+void Chirurgien::modifierInfoPatient(fstream& f)
 {
     int pos;
+    int numTel;
     cout <<endl<< "-----------------------------------------------------------------------------------" << endl;
-    cout << "\t++++ Modifier les informations d'un patient ++++" << endl << endl;
+    cout << "\t++++ Modifier numero de telephone de patient ++++" << endl << endl;
     cout << "Donner son position : ";
     cin >> pos;  
-    tab[pos]->saisir();
+    cout << "Donner le nouveau numTel : ";
+    cin >> numTel;
+    tab[pos]->modifierNumeroTel(numTel);
+    int numcin = tab[pos]->getNumCin();
+    string ligne;
+    bool patientTrouve = false;
+    fstream fichierTemp("C:\\Users\\marwa\\temp.txt", ios::in | ios::out | ios::trunc);
+    //fstream fichierTemp("C:\\Users\\hp\\Desktop\\temp.txt", ios::in | ios::out | ios::trunc);
+
+    if (!fichierTemp.is_open()) {
+        cout << "Erreur: Impossible d'ouvrir le fichier temporaire pour écriture." << endl;
+        exit(-1);
+    }
+    f.seekg(0);
+    while (getline(f, ligne)) {
+     
+            // Extraire le numéro de CIN après "NumCin: "
+            string numCINFromLine = ligne.substr(8, 8); // Commence à l'index 8, longueur 8
+            if (to_string(numcin) == numCINFromLine) {
+                size_t pos = ligne.find("NumTel: ");
+                ligne.replace(pos + 8, 8, to_string(numTel));                
+                patientTrouve = true;
+                cout << "Patient trouve " << endl;
+            } 
+                fichierTemp << ligne << endl;
+            
+        
+    }
+    // Fermer les fichiers
+    f.close();
+    fichierTemp.close();
+    // Supprimer le fichier original
+    remove("C:\\Users\\marwa\\patients.txt");
+    // Renommer le fichier temporaire pour remplacer le fichier original
+    rename("C:\\Users\\marwa\\temp.txt", "C:\\Users\\marwa\\patients.txt");
+    //rename("C:\\Users\\hp\Desktop\\temp.txt", "C:\\Users\\hp\\Desktop\\patients.txt");
+
+    if (patientTrouve)
+    {
+        cout << "Numéro de téléphone du patient modifié avec succès." << endl;
+    }
+    else
+    {
+        cout << "Patient avec le numéro de CIN donné non trouvé." << endl;
+    }
 
 }
 void Chirurgien::afficherTousLesPatients()
@@ -95,7 +141,9 @@ void Chirurgien::supprimerComplicationDuPatient()
 }
 void Chirurgien::creer(fstream& f)
 {
-    f.open(/*"C:\\Users\\marwa\\patients.txt"*/"C:\\Users\\hp\\Desktop\\patients.txt", ios::in | ios::out | ios::trunc);
+    f.open("C:\\Users\\marwa\\patients.txt", ios::in | ios::out | ios::trunc);
+    //f.open("C:\\Users\\hp\\Desktop\\patients.txt", ios::in | ios::out | ios::trunc);
+
     if (!f.is_open()) {
         cout << "Erreur: Impossible d'ouvrir le fichier pour écriture." << endl;
         exit(-1);
@@ -110,7 +158,9 @@ void Chirurgien::supprimerPatient(fstream& f)
 	tab.erase(tab.begin() + pos);
     string ligne;
     bool patientTrouve = false;
-    fstream fichierTemp(/*"C:\\Users\\marwa\\temp.txt"*/"C:\\Users\\hp\\Desktop\\temp.txt", ios::in | ios::out | ios::trunc);
+    fstream fichierTemp("C:\\Users\\marwa\\temp.txt", ios::in | ios::out | ios::trunc);
+    //fstream fichierTemp("C:\\Users\\hp\\Desktop\\temp.txt", ios::in | ios::out | ios::trunc);
+
     if (!fichierTemp.is_open()) {
         cout << "Erreur: Impossible d'ouvrir le fichier temporaire pour écriture." << endl;
         exit(-1);
@@ -136,7 +186,9 @@ void Chirurgien::supprimerPatient(fstream& f)
     // Supprimer le fichier original
     remove("C:\\Users\\marwa\\patients.txt");
     // Renommer le fichier temporaire pour remplacer le fichier original
-    rename (/*"C:\\Users\\marwa\\temp.txt"*/"C:\\Users\\hp\Desktop\\temp.txt", /*"C:\\Users\\marwa\\patients.txt"*/"C:\\Users\\hp\\Desktop\\patients.txt");
+    rename ("C:\\Users\\marwa\\temp.txt","C:\\Users\\marwa\\patients.txt");
+    //rename("C:\\Users\\hp\Desktop\\temp.txt", "C:\\Users\\hp\\Desktop\\patients.txt");
+
     if (!patientTrouve) {
         cout << "Patient avec le numero de CIN donne non trouve." << endl;
     }

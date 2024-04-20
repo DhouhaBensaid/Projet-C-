@@ -20,7 +20,7 @@ public :
     void consulterDossier(Secretaire&);
     void AjouterNote(Secretaire&);
     void ajouterComplication();
-    void modifierInfoPatient();
+    void modifierInfoPatient(fstream&);
 	void supprimerComplicationDuPatient();
     void afficherTousLesPatients();
     friend ostream& operator<<(ostream&, Chirurgien&);

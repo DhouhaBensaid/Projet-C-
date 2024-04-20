@@ -1,2 +1,174 @@
-﻿  gestion d'un dossier medical.cpp
-LINK : fatal error LNK1104: cannot open file 'C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\Release\gestion d'un dossier medical.exe'
+﻿  Chirurgien.cpp
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Chirurgien.cpp(102,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Chirurgien.cpp(224,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Chirurgien.cpp(227,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Chirurgien.cpp(237,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Chirurgien.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Chirurgien.cpp(115,5):
+  	see reference to class template instantiation 'dossierChirurgical<int>' being compiled
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(74,1):
+  	while compiling class template member function 'void dossierChirurgical<int>::afficher(void)'
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Chirurgien.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(133,46):
+  	while compiling class template member function 'dossierChirurgical<int>::~dossierChirurgical(void)'
+  
+  Complication.cpp
+  dossierChirurgical.cpp
+  dossierMedical.cpp
+  gestion d'un dossier medical.cpp
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'gestion%20d'un%20dossier%20medical.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.h(10,32):
+  	see reference to class template instantiation 'dossierChirurgical<int>' being compiled
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(74,1):
+  	while compiling class template member function 'void dossierChirurgical<int>::afficher(void)'
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'gestion%20d'un%20dossier%20medical.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(133,46):
+  	while compiling class template member function 'dossierChirurgical<int>::~dossierChirurgical(void)'
+  
+  Intervention.cpp
+  noteOperatoire.cpp
+  Patient.cpp
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Patient.cpp(32,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Patient.cpp(51,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Patient.cpp(83,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Patient.cpp(86,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Patient.cpp(106,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Patient.cpp(120,19): warning C4018: '<': signed/unsigned mismatch
+  Personne.cpp
+  postChirurgicale.cpp
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.cpp(11,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.cpp(51,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.cpp(102,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.cpp(105,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.cpp(124,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(38,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'postChirurgicale.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(38,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.h(10,32):
+  	see reference to class template instantiation 'dossierChirurgical<int>' being compiled
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(36,76):
+  	while compiling class template member function 'dossierChirurgical<int>::dossierChirurgical(const dossierChirurgical<int> &)'
+  		C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.cpp(9,81):
+  		see the first reference to 'dossierChirurgical<int>::dossierChirurgical' in 'postChirurgicale::postChirurgicale'
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'postChirurgicale.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(74,1):
+  	while compiling class template member function 'void dossierChirurgical<int>::afficher(void)'
+  		C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.cpp(45,30):
+  		see the first reference to 'dossierChirurgical<int>::afficher' in 'postChirurgicale::afficher'
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'postChirurgicale.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(133,46):
+  	while compiling class template member function 'dossierChirurgical<int>::~dossierChirurgical(void)'
+  		C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.cpp(7,27):
+  		see the first reference to 'dossierChirurgical<int>::~dossierChirurgical' in 'postChirurgicale::postChirurgicale'
+  
+  RendezVous.cpp
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\RendezVous.cpp(41,18): error C2511: 'bool RendezVous::operator ==(const RendezVous &) const': overloaded member function not found in 'RendezVous'
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\RendezVous.h(4,7):
+  see declaration of 'RendezVous'
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\RendezVous.cpp(42,10): error C2597: illegal reference to non-static member 'RendezVous::heureRdv'
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\RendezVous.cpp(42,10):
+  see declaration of 'RendezVous::heureRdv'
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\RendezVous.cpp(42,10): error C3867: 'RendezVous::heureRdv': non-standard syntax; use '&' to create a pointer to member
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\RendezVous.cpp(42,10): error C2568: '==': unable to resolve function overload
+  SalleAttente.cpp
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\SalleAttente.cpp(61,14): warning C4018: '<=': signed/unsigned mismatch
+  Secretaire.cpp
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(41,29): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(81,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(84,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(87,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(90,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(114,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(123,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(133,29): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(163,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(167,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(38,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Secretaire.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(38,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(13,43):
+  	see reference to class template instantiation 'dossierChirurgical<int>' being compiled
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(36,76):
+  	while compiling class template member function 'dossierChirurgical<int>::dossierChirurgical(const dossierChirurgical<int> &)'
+  		C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(91,31):
+  		see the first reference to 'dossierChirurgical<int>::dossierChirurgical' in 'Secretaire::operator ='
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Secretaire.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(74,1):
+  	while compiling class template member function 'void dossierChirurgical<int>::afficher(void)'
+  		C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Secretaire.cpp(125,30):
+  		see the first reference to 'dossierChirurgical<int>::afficher' in 'Secretaire::consulterToutLesDossier'
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Secretaire.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(133,46):
+  	while compiling class template member function 'dossierChirurgical<int>::~dossierChirurgical(void)'
+  
+  service.cpp
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(15,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(28,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(45,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(55,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(324,29): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(334,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(344,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(354,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(364,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(432,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(435,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(38,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'service.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(38,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\postChirurgicale.h(10,32):
+  	see reference to class template instantiation 'dossierChirurgical<int>' being compiled
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(36,76):
+  	while compiling class template member function 'dossierChirurgical<int>::dossierChirurgical(const dossierChirurgical<int> &)'
+  		C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.cpp(22,41):
+  		see the first reference to 'dossierChirurgical<int>::dossierChirurgical' in 'service::service'
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'service.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(80,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(74,1):
+  	while compiling class template member function 'void dossierChirurgical<int>::afficher(void)'
+  
+C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'service.cpp')
+  C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(134,19):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\dossierChirurgical.h(133,46):
+  	while compiling class template member function 'dossierChirurgical<int>::~dossierChirurgical(void)'
+  

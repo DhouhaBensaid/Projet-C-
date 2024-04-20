@@ -1,7 +1,9 @@
 #include "RendezVous.h"
 #include <iostream>
+int RendezVous::totalRdv = 0;
 RendezVous::RendezVous(int j, int m, int a, int h):DateRdv(j, m, a), heureRdv(h)
 {
+	totalRdv++;
 }
 
 void RendezVous::saisir()
@@ -36,6 +38,10 @@ istream& operator>>(istream& in, RendezVous& rdv)
 	cout << " Donner l'heure du Rendez-Vous" << endl;
 	in >> rdv.heureRdv;
 	return in;
+}
+
+bool RendezVous::operator==(const RendezVous& rdv) const {
+	return (heureRdv == rdv.heureRdv);
 }
 
 RendezVous::~RendezVous() {};

@@ -11,26 +11,26 @@ class SalleAttente
 public:
 	SalleAttente();
 	~SalleAttente();
-	friend ostream& operator<< (ostream&, SalleAttente&);
-	friend istream& operator>> (istream&, SalleAttente&);
-	RendezVous operator==(const RendezVous);
-	RendezVous operator <(const RendezVous);
-	void inserer(pair<int, Patient>);
-	map<int, Patient>::iterator rechercher(int);//NumCIN
-	map<int, Patient>::iterator rechercher(string);//Nom
+	friend ostream& operator<< (ostream&, SalleAttente&);	
+	friend istream& operator>> (istream&, SalleAttente&); 
+	void inserer(pair<int, Patient>); 
+	map<int, Patient>::iterator rechercher(int);//NumCIN 
+	
+	map<int, Patient>::iterator rechercher(string);//Nom 
 	map<int, Patient>::iterator fin() { return m.end(); }
-	void modifierNumtel(int numcin, int numtel);//modifier numtel
-	void modifierNumtel(string nom, int numtel);
-	void supprimer(int);//numCin
-	void supprimer(string);//nom
+	void modifierNumtel(int numcin, int numtel);//modifier numtel 
+	void modifierNumtel(string nom, int numtel); 
+	void supprimer(int);//numCin			
+	void supprimer(string);//nom			
 
-	void afficherToutRdv();//for-each
-	void ajouterRdv(RendezVous);//pushback
-	bool supprimerDoublonsRdv(RendezVous);//remove
-	RendezVous rechercherRdv(date);//find
-	int nombreRdv();//count
-	void insererRdv(int, RendezVous);//position,insert(position,valeur)
-	void supprimerRdv();//clear,earse(position)
+	//List functions
+	void afficherToutRdv();					
+	void ajouterRdv();						
+	void supprimerDoublonsRdv();			
+	list<RendezVous>::iterator rechercherRdv(RendezVous&);				
+	int nombreRdv();						
+	void insererRdv();							
+	void supprimerToutRdv();				
 	
 
 

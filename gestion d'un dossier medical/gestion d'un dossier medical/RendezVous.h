@@ -3,6 +3,7 @@
 #include<string>
 class RendezVous
 {
+	static int totalRdv;
 	date DateRdv;
 	int heureRdv;
 public:
@@ -13,6 +14,9 @@ public:
 	int getHeureRdv() { return this->heureRdv; }
 	friend ostream& operator<<(ostream&, RendezVous&);
 	friend istream& operator>>(istream&, RendezVous&);
+	bool operator==(const RendezVous& rdv) const;
+	static int getTotalRdv() { return totalRdv; }
+
 	~RendezVous();
 };
 

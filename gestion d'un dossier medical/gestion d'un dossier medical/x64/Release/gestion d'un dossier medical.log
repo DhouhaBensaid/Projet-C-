@@ -1,26 +1,13 @@
-﻿  Chirurgien.cpp
-C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\Chirurgien.cpp(139,44): warning C4129: 'D': unrecognized character escape sequence
-  Patient.cpp
-  Secretaire.cpp
-  dossierChirurgical.cpp
-  gestion d'un dossier medical.cpp
+﻿  gestion d'un dossier medical.cpp
 C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.h(13,48): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'gestion%20d'un%20dossier%20medical.cpp')
   
 C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.h(14,45): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'gestion%20d'un%20dossier%20medical.cpp')
-  
-  postChirurgicale.cpp
-  service.cpp
-C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.h(13,48): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'service.cpp')
-  
-C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\gestion d'un dossier medical\service.h(14,45): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'service.cpp')
   
   Generating code
-  17 of 341 functions ( 5.0%) were compiled, the rest were copied from previous compilation.
+  582 of 976 functions (59.6%) were compiled, the rest were copied from previous compilation.
     1 functions were new in current compilation
-    30 functions had inline decision re-evaluated but remain unchanged
+    75 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   gestion d'un dossier medical.vcxproj -> C:\Users\marwa\OneDrive\Desktop\Enicar\SEM2\Projet-C-\gestion d'un dossier medical\x64\Release\gestion d'un dossier medical.exe

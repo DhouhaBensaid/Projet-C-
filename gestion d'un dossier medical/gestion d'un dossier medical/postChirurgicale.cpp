@@ -19,8 +19,7 @@ void postChirurgicale::saisir()
 {
 	char rep;
 	cout << "***Saisie des informations du dossier post chirurgical***" << endl;
-	dossierChirurgical dc;
-	dc.saisir();
+	dossierChirurgical::saisir();
 	cout << "Donner l heure du rendez-vous " << endl;
 	cin >> heureRdv;
 	cout << "Donner la date de rendez-vous" << endl;
@@ -41,8 +40,10 @@ void postChirurgicale::saisir()
 void postChirurgicale::afficher()
 {
 	cout << "***Affichage des informations du dossier post chirurgical***" << endl;
-	dossierChirurgical dc;
-	dc.afficher();
+	//dossierChirurgical dc;
+	//dc.afficher();
+	dossierChirurgical::afficher();
+	//dossierMedical::afficher();
 	cout << "Heure du rendez-vous : " << heureRdv << endl;
 	cout << "Date du rendez-vous : " << DateRdv << endl;
 	cout << "Progres realises au cours du rendez-vous : " << progresRealises<< endl;

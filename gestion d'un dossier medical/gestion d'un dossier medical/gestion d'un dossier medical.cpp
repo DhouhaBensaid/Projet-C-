@@ -13,71 +13,96 @@
 int main()
 {
   
-    //test du classe postChirurfical
+   
 
-
-   /* postChirurgicale post;
-    post.saisir();
-    post.afficher();*/
-
-
-    // test du classe secreataire
-
-    /*Secretaire sec;
+    Secretaire sec;
     sec.saisir();
     sec.afficher();
     sec.creerDossierChirurgical();
-    sec.consulterToutLesDossier();
-    sec.planifierRdv();
-    sec.afficherTousLesRendezVous();
-    sec.supprimerRdv(1);
-    sec.afficherTousLesRendezVous();*/
-
-
-
+   
     // test du classe chirurgien 
 
 
-    //Chirurgien ch;
-    //fstream f;
-   /* ch.saisir();
-    ch.afficher();
+    Chirurgien ch;
+  
 	cout << " \t**************** Affichage du dossier depuis chirurgien ***********************" << endl;
+    // fy blaset case 2 
     ch.consulterDossier(sec);
     ch.AjouterNote(sec);
-    ch.consulterDossier(sec);  */
-    //ch.creer(f);
-    //ch.saisirPatients(f);
-    //ch.modifierInfoPatient();
-   // ch.ajouterComplication();
-
-    //ch.afficherTousLesPatients();
-    //ch.supprimerPatient(f);
-    //ch.supprimerComplicationDuPatient();
-
-/*
-    ch.afficherTousLesPatients();
-    ch.supprimerPatient(f);
-    ch.afficherAPartirDuFicher(f);
-    ch.supprimerComplicationDuPatient();*/
-    
-
-    //test du template
-
-   /*dossierChirurgical<string> d("marwa", "hadhraoui", 16, 4, 2024, 'F', "dentaire", "typeIntervention", 21, 6, 2001, "2");
-    cout << d;
-    dossierChirurgical<int> d1;
-    cin >> d1;*/
-    //test class service
-    /*service s;
-    s.saisir();
-    s.afficher(s);*/
+    //fy blaset case 3 
+    ch.consulterDossier(sec);  
+ 
   
 
+    //____________test class service____________
+    service se;
+    se.saisir();
+    se.afficher(se);
+    
+    //_________Test classe Salle d'attente ____________
+    SalleAttente s;
 
+    // -----list test functions----
+    s.ajouterRdv();
+    //test du methode statique 
+    //--------------------------------------------------------------
+    int totalRdv = RendezVous::getTotalRdv();
+    cout << "Nombre total de rendez-vous : " << totalRdv << endl;
+    //---------------------------------------------------------------
+	s.afficherToutRdv(); 
+   // s.supprimerDoublonsRdv();
+    s.afficherToutRdv();
+    int nb = s.nombreRdv();
+    cout << "Nombre de rendez-Vous est : " << nb << endl;
+    s.insererRdv();
+    s.afficherToutRdv();
+    s.supprimerToutRdv();
+    int nb2 = s.nombreRdv();
+    cout << "Nombre de rendez-Vous est : " << nb2 << endl;
+    RendezVous rdv(11, 11, 1111, 10); 
+    list<RendezVous>::iterator it =s.rechercherRdv(rdv);
+    cout << *it;
 
+    /* ---- - MAP test functions----*/
+    Patient p1, p2, p3;
+    p1.saisir();
+	p2.saisir();
+    p3.saisir();
+    //hne a3mel patient aatyh Nom Hadhraoui bech tnajem tekhdem byh f les fonctions baaed li yekhdhou NOM comme parm ;)
+    pair<int, Patient> pair1(p1.getNumCin(), p1);
+    pair<int, Patient> pair2(p2.getNumCin(), p2);
+    pair<int, Patient> pair3(p3.getNumCin(), p3);
+    s.inserer(pair1);
+    s.inserer(pair2);
+    s.inserer(pair3);
+    cout << s << endl;
+    map<int, Patient>::iterator itmap;
+    //Recherche selon la cle
+    itmap = s.rechercher(p2.getNumCin());
+    if (itmap != s.fin()) cout << itmap->second << endl;
 
+	//Recherche selon nom du patient
+   
+    itmap =s.rechercher(p2.getNom());
+    if (itmap != s.fin()) cout << itmap->second << endl;
 
+    //modifier une valeur la cle
+    s.modifierNumtel(p2.getNumCin(), 25252525);
+    cout << s << endl;
+
+    //modifier une valeur selon le nom de patient
+    s.modifierNumtel("Hadhraoui", 21212121);
+    cout << s<<endl;
+
+    //supprimer un patient selon le nom de patient
+    s.supprimer("Hadhraoui");
+    cout << s<<endl;
+
+    //supprimer un patient selon la valeurde la cle
+    s.supprimer(p2.getNumCin());
+    cout << s<<endl;
+    
+    
     return 0;
 
    
